@@ -30,4 +30,22 @@ public class Mascota
 
     [StringLength(200)]
     public string? SenasParticulares { get; set; }
+
+    // --- NUEVOS CAMPOS DEL DBA ---
+    [StringLength(30)]
+    public string? EdadAproximada { get; set; }
+
+    [StringLength(20)]
+    public string? Tamano { get; set; }
+
+    [StringLength(20)]
+    public string? Esterilizado { get; set; }
+
+    [StringLength(20)]
+    public string? Vacunas { get; set; }
+
+    public string? Alergias { get; set; }
+
+    public string? Observaciones { get; set; }
+    // -----------------------------
 }
