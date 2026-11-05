@@ -14,8 +14,10 @@ public class ClienteDatos
 
         const string sql = """
             SELECT id_cliente, nombre, apellido_paterno,
-                   apellido_materno, telefono, correo,
-                   direccion, fecha_registro
+                   apellido_materno, telefono, telefono_alternativo, correo,
+                   direccion, colonia, ciudad, estado, codigo_postal,
+                   contacto_emergencia, parentesco_emergencia, telefono_emergencia,
+                   observaciones, fecha_registro
             FROM cliente
             ORDER BY apellido_paterno, nombre;
             """;
@@ -38,8 +40,10 @@ public class ClienteDatos
 
         const string sql = """
             SELECT id_cliente, nombre, apellido_paterno,
-                   apellido_materno, telefono, correo,
-                   direccion, fecha_registro
+                   apellido_materno, telefono, telefono_alternativo, correo,
+                   direccion, colonia, ciudad, estado, codigo_postal,
+                   contacto_emergencia, parentesco_emergencia, telefono_emergencia,
+                   observaciones, fecha_registro
             FROM cliente
             WHERE id_cliente = @idCliente;
             """;
@@ -61,8 +65,10 @@ public class ClienteDatos
 
         const string sql = """
             SELECT id_cliente, nombre, apellido_paterno,
-                   apellido_materno, telefono, correo,
-                   direccion, fecha_registro
+                   apellido_materno, telefono, telefono_alternativo, correo,
+                   direccion, colonia, ciudad, estado, codigo_postal,
+                   contacto_emergencia, parentesco_emergencia, telefono_emergencia,
+                   observaciones, fecha_registro
             FROM cliente
             WHERE nombre LIKE @texto
                OR apellido_paterno LIKE @texto
@@ -92,11 +98,13 @@ public class ClienteDatos
 
         const string sql = """
             INSERT INTO cliente
-            (nombre, apellido_paterno, apellido_materno,
-             telefono, correo, direccion)
+            (nombre, apellido_paterno, apellido_materno, telefono, 
+             telefono_alternativo, correo, direccion, colonia, ciudad, estado, 
+             codigo_postal, contacto_emergencia, parentesco_emergencia, telefono_emergencia, observaciones)
             VALUES
-            (@nombre, @apellidoPaterno, @apellidoMaterno,
-             @telefono, @correo, @direccion);
+            (@nombre, @apellidoPaterno, @apellidoMaterno, @telefono,
+             @telefonoAlternativo, @correo, @direccion, @colonia, @ciudad, @estado,
+             @codigoPostal, @contactoEmergencia, @parentescoEmergencia, @telefonoEmergencia, @observaciones);
             """;
 
         using MySqlCommand cmd = new(sql, cn);
@@ -118,8 +126,17 @@ public class ClienteDatos
                 apellido_paterno = @apellidoPaterno,
                 apellido_materno = @apellidoMaterno,
                 telefono = @telefono,
+                telefono_alternativo = @telefonoAlternativo,
                 correo = @correo,
-                direccion = @direccion
+                direccion = @direccion,
+                colonia = @colonia,
+                ciudad = @ciudad,
+                estado = @estado,
+                codigo_postal = @codigoPostal,
+                contacto_emergencia = @contactoEmergencia,
+                parentesco_emergencia = @parentescoEmergencia,
+                telefono_emergencia = @telefonoEmergencia,
+                observaciones = @observaciones
             WHERE id_cliente = @idCliente;
             """;
 
@@ -136,8 +153,7 @@ public class ClienteDatos
         Cliente cliente)
     {
         cmd.Parameters.AddWithValue("@nombre", cliente.Nombre);
-        cmd.Parameters.AddWithValue(
-            "@apellidoPaterno", cliente.ApellidoPaterno);
+        cmd.Parameters.AddWithValue("@apellidoPaterno", cliente.ApellidoPaterno);
 
         cmd.Parameters.AddWithValue(
             "@apellidoMaterno",
@@ -146,12 +162,48 @@ public class ClienteDatos
         cmd.Parameters.AddWithValue("@telefono", cliente.Telefono);
 
         cmd.Parameters.AddWithValue(
+            "@telefonoAlternativo",
+            (object?)cliente.TelefonoAlternativo ?? DBNull.Value);
+
+        cmd.Parameters.AddWithValue(
             "@correo",
             (object?)cliente.Correo ?? DBNull.Value);
 
         cmd.Parameters.AddWithValue(
             "@direccion",
             (object?)cliente.Direccion ?? DBNull.Value);
+
+        cmd.Parameters.AddWithValue(
+            "@colonia",
+            (object?)cliente.Colonia ?? DBNull.Value);
+
+        cmd.Parameters.AddWithValue(
+            "@ciudad",
+            (object?)cliente.Ciudad ?? DBNull.Value);
+
+        cmd.Parameters.AddWithValue(
+            "@estado",
+            (object?)cliente.Estado ?? DBNull.Value);
+
+        cmd.Parameters.AddWithValue(
+            "@codigoPostal",
+            (object?)cliente.CodigoPostal ?? DBNull.Value);
+
+        cmd.Parameters.AddWithValue(
+            "@contactoEmergencia",
+            (object?)cliente.ContactoEmergencia ?? DBNull.Value);
+
+        cmd.Parameters.AddWithValue(
+            "@parentescoEmergencia",
+            (object?)cliente.ParentescoEmergencia ?? DBNull.Value);
+
+        cmd.Parameters.AddWithValue(
+            "@telefonoEmergencia",
+            (object?)cliente.TelefonoEmergencia ?? DBNull.Value);
+
+        cmd.Parameters.AddWithValue(
+            "@observaciones",
+            (object?)cliente.Observaciones ?? DBNull.Value);
     }
 
     private static Cliente Mapear(MySqlDataReader dr)
@@ -160,23 +212,23 @@ public class ClienteDatos
         {
             IdCliente = Convert.ToInt32(dr["id_cliente"]),
             Nombre = Convert.ToString(dr["nombre"]) ?? "",
-            ApellidoPaterno =
-                Convert.ToString(dr["apellido_paterno"]) ?? "",
-            ApellidoMaterno =
-                dr["apellido_materno"] == DBNull.Value
-                    ? null
-                    : Convert.ToString(dr["apellido_materno"]),
+            ApellidoPaterno = Convert.ToString(dr["apellido_paterno"]) ?? "",
+            ApellidoMaterno = dr["apellido_materno"] == DBNull.Value ? null : Convert.ToString(dr["apellido_materno"]),
             Telefono = Convert.ToString(dr["telefono"]) ?? "",
-            Correo =
-                dr["correo"] == DBNull.Value
-                    ? null
-                    : Convert.ToString(dr["correo"]),
-            Direccion =
-                dr["direccion"] == DBNull.Value
-                    ? null
-                    : Convert.ToString(dr["direccion"]),
-            FechaRegistro =
-                Convert.ToDateTime(dr["fecha_registro"])
+
+            TelefonoAlternativo = dr["telefono_alternativo"] == DBNull.Value ? null : Convert.ToString(dr["telefono_alternativo"]),
+            Correo = dr["correo"] == DBNull.Value ? null : Convert.ToString(dr["correo"]),
+            Direccion = dr["direccion"] == DBNull.Value ? null : Convert.ToString(dr["direccion"]),
+            Colonia = dr["colonia"] == DBNull.Value ? null : Convert.ToString(dr["colonia"]),
+            Ciudad = dr["ciudad"] == DBNull.Value ? null : Convert.ToString(dr["ciudad"]),
+            Estado = dr["estado"] == DBNull.Value ? null : Convert.ToString(dr["estado"]),
+            CodigoPostal = dr["codigo_postal"] == DBNull.Value ? null : Convert.ToString(dr["codigo_postal"]),
+            ContactoEmergencia = dr["contacto_emergencia"] == DBNull.Value ? null : Convert.ToString(dr["contacto_emergencia"]),
+            ParentescoEmergencia = dr["parentesco_emergencia"] == DBNull.Value ? null : Convert.ToString(dr["parentesco_emergencia"]),
+            TelefonoEmergencia = dr["telefono_emergencia"] == DBNull.Value ? null : Convert.ToString(dr["telefono_emergencia"]),
+            Observaciones = dr["observaciones"] == DBNull.Value ? null : Convert.ToString(dr["observaciones"]),
+
+            FechaRegistro = Convert.ToDateTime(dr["fecha_registro"])
         };
     }
 }
