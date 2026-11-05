@@ -1,0 +1,31 @@
+﻿@page
+@model Veterinaria.Web.Pages.Clientes.DetalleModel
+@{
+    ViewData["Title"] = "Detalle del Cliente";
+}
+
+<h2>Detalle del cliente</h2>
+
+<div class="card border-0 shadow-sm p-4">
+    <dl class="row">
+        <dt class="col-sm-3">Nombre</dt>
+        <dd class="col-sm-9">@Model.Cliente.Nombre @Model.Cliente.ApellidoPaterno @Model.Cliente.ApellidoMaterno</dd>
+
+        <dt class="col-sm-3">Teléfono</dt>
+        <dd class="col-sm-9">@Model.Cliente.Telefono</dd>
+
+        <dt class="col-sm-3">Correo</dt>
+        <dd class="col-sm-9">@Model.Cliente.Correo</dd>
+
+        <dt class="col-sm-3">Dirección</dt>
+        <dd class="col-sm-9">@Model.Cliente.Direccion</dd>
+    </dl>
+
+    <div>
+        <a asp-page="/Mascotas/Index" asp-route-idCliente="@Model.Cliente.IdCliente"
+           class="btn btn-success">Ver mascotas</a>
+        <a asp-page="./Editar" asp-route-id="@Model.Cliente.IdCliente"
+           class="btn btn-primary">Editar</a>
+        <a asp-page="./Index" class="btn btn-secondary">Regresar</a>
+    </div>
+</div>
