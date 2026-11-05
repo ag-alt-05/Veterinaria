@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1F94FB81-C705-422D-AD94-DDBD50BD3B57}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\mascotas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F94FB81-C705-422D-AD94-DDBD50BD3B57}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\mascotas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F94FB81-C705-422D-AD94-DDBD50BD3B57}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F94FB81-C705-422D-AD94-DDBD50BD3B57}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F94FB81-C705-422D-AD94-DDBD50BD3B57}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\veterinarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F94FB81-C705-422D-AD94-DDBD50BD3B57}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\veterinarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F94FB81-C705-422D-AD94-DDBD50BD3B57}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\recetas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F94FB81-C705-422D-AD94-DDBD50BD3B57}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\recetas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F94FB81-C705-422D-AD94-DDBD50BD3B57}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\consultas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F94FB81-C705-422D-AD94-DDBD50BD3B57}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\consultas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F94FB81-C705-422D-AD94-DDBD50BD3B57}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1F94FB81-C705-422D-AD94-DDBD50BD3B57}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Veterinarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Veterinarios\\Index.cshtml",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Veterinarios\\Index.cshtml",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Veterinarios\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-05T07:01:31.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Recetas\\Index.cshtml",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Recetas\\Index.cshtml",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Recetas\\Index.cshtml",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Recetas\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-05T07:00:02.81Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Index.cshtml",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Mascotas\\Index.cshtml",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Index.cshtml",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Mascotas\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-05T06:59:50.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Consultas\\Index.cshtml",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Consultas\\Index.cshtml",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Consultas\\Index.cshtml",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Consultas\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-05T06:59:21.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Clientes\\Index.cshtml",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Clientes\\Index.cshtml",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Clientes\\Index.cshtml",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Clientes\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-05T06:59:09.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-05T06:55:15.834Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
