@@ -3,6 +3,42 @@
   "WorkspaceRootPath": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\mascotas\\detalle.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\mascotas\\detalle.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\mascotas\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\mascotas\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\mascotas\\editar.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\mascotas\\editar.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\mascotas\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\mascotas\\editar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\mascotas\\nueva.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\mascotas\\nueva.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\mascotas\\nueva.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\mascotas\\nueva.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\mascotas\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\mascotas\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\mascotas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\mascotas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\recetas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\recetas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\clientes\\detalle.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\clientes\\detalle.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,10 +63,6 @@
       "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\clientes\\nuevo.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\clientes\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\clientes\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,24 +71,8 @@
       "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\models\\datostemporales.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\mascotas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\mascotas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\consultas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\consultas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\veterinarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\veterinarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|c:\\5to\\pgm visual\\veterinaria\\veterinaria.web\\veterinaria.web\\pages\\recetas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CFA513FE-5172-05D4-210C-91C6B21EC4D0}|Veterinaria.Web\\Veterinaria.Web.csproj|solutionrelative:veterinaria.web\\pages\\recetas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -72,6 +88,97 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Detalle.cshtml.cs",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Detalle.cshtml.cs",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Mascotas\\Detalle.cshtml.cs",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Detalle.cshtml.cs",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Mascotas\\Detalle.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T08:13:40.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Detalle.cshtml",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Detalle.cshtml",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Mascotas\\Detalle.cshtml",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Detalle.cshtml",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Mascotas\\Detalle.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-05T08:13:20.339Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Editar.cshtml.cs",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Editar.cshtml.cs",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Mascotas\\Editar.cshtml.cs",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Editar.cshtml.cs",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Mascotas\\Editar.cshtml.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAwwEUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T08:12:55.851Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Editar.cshtml",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Editar.cshtml",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Mascotas\\Editar.cshtml",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Editar.cshtml",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Mascotas\\Editar.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-05T08:11:37.365Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Nueva.cshtml.cs",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Nueva.cshtml.cs",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Mascotas\\Nueva.cshtml.cs",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Nueva.cshtml.cs",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Mascotas\\Nueva.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T08:10:59.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Nueva.cshtml",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Nueva.cshtml",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Mascotas\\Nueva.cshtml",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Nueva.cshtml",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Mascotas\\Nueva.cshtml",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAAEUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-05T08:10:36.954Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Mascotas\\Index.cshtml.cs",
+              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Index.cshtml.cs",
+              "RelativeToolTip": "Veterinaria.Web\\Pages\\Mascotas\\Index.cshtml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-05T08:09:52.939Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Detalle.cshtml.cs",
               "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Clientes\\Detalle.cshtml.cs",
               "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Clientes\\Detalle.cshtml.cs",
               "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Clientes\\Detalle.cshtml.cs",
@@ -83,7 +190,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 10,
               "Title": "Detalle.cshtml",
               "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Clientes\\Detalle.cshtml",
               "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Clientes\\Detalle.cshtml",
@@ -91,12 +198,11 @@
               "RelativeToolTip": "Veterinaria.Web\\Pages\\Clientes\\Detalle.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-05T07:48:13.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T07:48:13.846Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "Editar.cshtml.cs",
               "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Clientes\\Editar.cshtml.cs",
               "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Clientes\\Editar.cshtml.cs",
@@ -104,12 +210,11 @@
               "RelativeToolTip": "Veterinaria.Web\\Pages\\Clientes\\Editar.cshtml.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAzwDMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T07:47:24.072Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T07:47:24.072Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
               "Title": "Editar.cshtml",
               "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Clientes\\Editar.cshtml",
               "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Clientes\\Editar.cshtml",
@@ -117,12 +222,11 @@
               "RelativeToolTip": "Veterinaria.Web\\Pages\\Clientes\\Editar.cshtml",
               "ViewState": "AgIAAAsAAAAAAAAAAAAowDMAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-05T07:47:10.781Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T07:47:10.781Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 14,
               "Title": "Nuevo.cshtml.cs",
               "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Clientes\\Nuevo.cshtml.cs",
               "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Clientes\\Nuevo.cshtml.cs",
@@ -130,12 +234,11 @@
               "RelativeToolTip": "Veterinaria.Web\\Pages\\Clientes\\Nuevo.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T07:45:38.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T07:45:38.261Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 13,
               "Title": "Nuevo.cshtml",
               "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Clientes\\Nuevo.cshtml",
               "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Clientes\\Nuevo.cshtml",
@@ -143,12 +246,11 @@
               "RelativeToolTip": "Veterinaria.Web\\Pages\\Clientes\\Nuevo.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-05T07:45:13.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T07:45:13.202Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Clientes\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Clientes\\Index.cshtml.cs",
@@ -156,12 +258,11 @@
               "RelativeToolTip": "Veterinaria.Web\\Pages\\Clientes\\Index.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T07:40:00.083Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T07:40:00.083Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 16,
               "Title": "DatosTemporales.cs",
               "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Models\\DatosTemporales.cs",
               "RelativeDocumentMoniker": "Veterinaria.Web\\Models\\DatosTemporales.cs",
@@ -169,12 +270,11 @@
               "RelativeToolTip": "Veterinaria.Web\\Models\\DatosTemporales.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAcwEsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-11-05T07:38:20.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-11-05T07:38:20.49Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Veterinarios\\Index.cshtml",
               "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Veterinarios\\Index.cshtml",
@@ -186,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Recetas\\Index.cshtml",
               "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Recetas\\Index.cshtml",
@@ -194,58 +294,20 @@
               "RelativeToolTip": "Veterinaria.Web\\Pages\\Recetas\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-05T07:00:02.81Z"
+              "WhenOpened": "2026-11-05T07:00:02.81Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Index.cshtml",
               "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Mascotas\\Index.cshtml",
               "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Mascotas\\Index.cshtml",
               "RelativeToolTip": "Veterinaria.Web\\Pages\\Mascotas\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-11-05T06:59:50.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Consultas\\Index.cshtml",
-              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Consultas\\Index.cshtml",
-              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Consultas\\Index.cshtml",
-              "RelativeToolTip": "Veterinaria.Web\\Pages\\Consultas\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-05T06:59:21.147Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Clientes\\Index.cshtml",
-              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Clientes\\Index.cshtml",
-              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Clientes\\Index.cshtml",
-              "RelativeToolTip": "Veterinaria.Web\\Pages\\Clientes\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-05T06:59:09.283Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Veterinaria.Web\\Pages\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\5TO\\PGM VISUAL\\Veterinaria\\Veterinaria.Web\\Veterinaria.Web\\Pages\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Veterinaria.Web\\Pages\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-11-05T06:55:15.834Z",
               "EditorCaption": ""
             }
           ]

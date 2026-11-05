@@ -51,8 +51,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Mascotas/Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzY290YXNcRGV0YWxsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Mascotas/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzY290YXNcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Mascotas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzY290YXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Mascotas/Nueva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzY290YXNcTnVldmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Privacy.cshtml]
