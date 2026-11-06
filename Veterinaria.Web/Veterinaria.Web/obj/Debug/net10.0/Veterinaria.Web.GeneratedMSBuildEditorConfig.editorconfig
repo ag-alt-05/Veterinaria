@@ -12,85 +12,85 @@ build_property.EntryPointFilePath =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Veterinaria.Web
 build_property.RootNamespace = Veterinaria.Web
-build_property.ProjectDir = C:\5TO\PGM VISUAL\Veterinaria\Veterinaria.Web\Veterinaria.Web\
+build_property.ProjectDir = C:\UABC\Entornos Virtuales\Veterinaria\Veterinaria.Web\Veterinaria.Web\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 10.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\5TO\PGM VISUAL\Veterinaria\Veterinaria.Web\Veterinaria.Web
+build_property.MSBuildProjectDirectory = C:\UABC\Entornos Virtuales\Veterinaria\Veterinaria.Web\Veterinaria.Web
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Clientes/Detalle.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Clientes/Detalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcRGV0YWxsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Clientes/Editar.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Clientes/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Clientes/Index.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Clientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Clientes/Nuevo.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Clientes/Nuevo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50ZXNcTnVldm8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Consultas/Index.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Consultas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uc3VsdGFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Error.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Index.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Mascotas/Detalle.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Mascotas/Detalle.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzY290YXNcRGV0YWxsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Mascotas/Editar.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Mascotas/Editar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzY290YXNcRWRpdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Mascotas/Index.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Mascotas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzY290YXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Mascotas/Nueva.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Mascotas/Nueva.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFzY290YXNcTnVldmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Privacy.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Recetas/Index.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Recetas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXRhc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Veterinarios/Index.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Veterinarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmV0ZXJpbmFyaW9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/_ViewImports.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/_ViewStart.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/5TO/PGM VISUAL/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Shared/_Layout.cshtml]
+[C:/UABC/Entornos Virtuales/Veterinaria/Veterinaria.Web/Veterinaria.Web/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-zmy54hr6yv
