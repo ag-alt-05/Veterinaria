@@ -1,0 +1,75 @@
+﻿
+@page
+@model Veterinaria.Web.Pages.Clientes.IndexModel
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<h2 class="fw-bold mb-3">Clientes</h2>
+
+@if (!string.IsNullOrWhiteSpace(Model.Error))
+{
+    <div class="alert alert-danger">
+        @Model.Error
+    </div>
+}
+
+@if (TempData["Mensaje"] != null)
+{
+    <div class="alert alert-success">@TempData["Mensaje"]</div>
+}
+
+<div class="d-flex justify-content-between mb-3">
+    <p class="text-muted">Administración de propietarios</p>
+    <a asp-page="./Nuevo" class="btn btn-primary">+ Nuevo cliente</a>
+</div>
+
+<form method="get" class="row g-2 mb-4">
+    <div class="col-md-8">
+        <input asp-for="Buscar" class="form-control"
+               placeholder="Buscar por nombre, teléfono o correo" />
+    </div>
+    <div class="col-md-4">
+        <button class="btn btn-outline-primary">Buscar</button>
+        <a asp-page="./Index" class="btn btn-outline-secondary">Limpiar</a>
+    </div>
+</form>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body table-responsive">
+        <table class="table table-hover align-middle">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th>Correo</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var c in Model.Clientes)
+            {
+                <tr>
+                    <td>@c.Nombre @c.ApellidoPaterno @c.ApellidoMaterno</td>
+                    <td>@c.Telefono</td>
+                    <td>@c.Correo</td>
+                    <td>
+                        <a asp-page="./Detalle" asp-route-id="@c.IdCliente"
+                           class="btn btn-sm btn-outline-primary">Ver</a>
+                        <a asp-page="./Editar" asp-route-id="@c.IdCliente"
+                           class="btn btn-sm btn-outline-secondary">Editar</a>
+                        <a asp-page="/Mascotas/Index" asp-route-idCliente="@c.IdCliente"
+                           class="btn btn-sm btn-outline-success">Mascotas</a>
+                        <a asp-page="./Eliminar" asp-route-id="@c.IdCliente"
+                           class="btn btn-sm btn-outline-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        @if (!Model.Clientes.Any())
+        {
+            <p class="text-center text-muted">No se encontraron clientes.</p>
+        }
+    </div>
+</div>
