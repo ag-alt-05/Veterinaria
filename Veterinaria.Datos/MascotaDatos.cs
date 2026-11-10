@@ -13,9 +13,8 @@ public class MascotaDatos
         cn.Open();
 
         const string sql = """
-            SELECT id_mascota, id_cliente, nombre, especie, raza, sexo, 
-                   fecha_nacimiento, color, senas_particulares,
-                   edad_aproximada, tamano, esterilizado, vacunas, alergias, observaciones
+            SELECT id_mascota, id_cliente, nombre, especie, raza,
+                   sexo, fecha_nacimiento, color, senas_particulares
             FROM mascota
             ORDER BY nombre;
             """;
@@ -37,9 +36,8 @@ public class MascotaDatos
         cn.Open();
 
         const string sql = """
-            SELECT id_mascota, id_cliente, nombre, especie, raza, sexo, 
-                   fecha_nacimiento, color, senas_particulares,
-                   edad_aproximada, tamano, esterilizado, vacunas, alergias, observaciones
+            SELECT id_mascota, id_cliente, nombre, especie, raza,
+                   sexo, fecha_nacimiento, color, senas_particulares
             FROM mascota
             WHERE id_cliente = @idCliente
             ORDER BY nombre;
@@ -62,9 +60,8 @@ public class MascotaDatos
         cn.Open();
 
         const string sql = """
-            SELECT id_mascota, id_cliente, nombre, especie, raza, sexo, 
-                   fecha_nacimiento, color, senas_particulares,
-                   edad_aproximada, tamano, esterilizado, vacunas, alergias, observaciones
+            SELECT id_mascota, id_cliente, nombre, especie, raza,
+                   sexo, fecha_nacimiento, color, senas_particulares
             FROM mascota
             WHERE id_mascota = @idMascota;
             """;
@@ -84,19 +81,19 @@ public class MascotaDatos
 
         const string sql = """
             INSERT INTO mascota
-            (id_cliente, nombre, especie, raza, sexo, fecha_nacimiento, 
-             color, senas_particulares, edad_aproximada, tamano, esterilizado, 
-             vacunas, alergias, observaciones)
+            (id_cliente, nombre, especie, raza, sexo,
+             fecha_nacimiento, color, senas_particulares)
             VALUES
-            (@idCliente, @nombre, @especie, @raza, @sexo, @fechaNacimiento,
-             @color, @senasParticulares, @edadAproximada, @tamano, @esterilizado,
-             @vacunas, @alergias, @observaciones);
+            (@idCliente, @nombre, @especie, @raza, @sexo,
+             @fechaNacimiento, @color, @senasParticulares);
             """;
 
         using MySqlCommand cmd = new(sql, cn);
+
         AgregarParametros(cmd, mascota);
 
         cmd.ExecuteNonQuery();
+
         return Convert.ToInt32(cmd.LastInsertedId);
     }
 
@@ -114,17 +111,12 @@ public class MascotaDatos
                 sexo = @sexo,
                 fecha_nacimiento = @fechaNacimiento,
                 color = @color,
-                senas_particulares = @senasParticulares,
-                edad_aproximada = @edadAproximada,
-                tamano = @tamano,
-                esterilizado = @esterilizado,
-                vacunas = @vacunas,
-                alergias = @alergias,
-                observaciones = @observaciones
+                senas_particulares = @senasParticulares
             WHERE id_mascota = @idMascota;
             """;
 
         using MySqlCommand cmd = new(sql, cn);
+
         AgregarParametros(cmd, mascota);
         cmd.Parameters.AddWithValue("@idMascota", mascota.IdMascota);
 
@@ -155,30 +147,6 @@ public class MascotaDatos
         cmd.Parameters.AddWithValue(
             "@senasParticulares",
             (object?)mascota.SenasParticulares ?? DBNull.Value);
-
-        cmd.Parameters.AddWithValue(
-            "@edadAproximada",
-            (object?)mascota.EdadAproximada ?? DBNull.Value);
-
-        cmd.Parameters.AddWithValue(
-            "@tamano",
-            (object?)mascota.Tamano ?? DBNull.Value);
-
-        cmd.Parameters.AddWithValue(
-            "@esterilizado",
-            (object?)mascota.Esterilizado ?? DBNull.Value);
-
-        cmd.Parameters.AddWithValue(
-            "@vacunas",
-            (object?)mascota.Vacunas ?? DBNull.Value);
-
-        cmd.Parameters.AddWithValue(
-            "@alergias",
-            (object?)mascota.Alergias ?? DBNull.Value);
-
-        cmd.Parameters.AddWithValue(
-            "@observaciones",
-            (object?)mascota.Observaciones ?? DBNull.Value);
     }
 
     private static Mascota Mapear(MySqlDataReader dr)
@@ -189,18 +157,21 @@ public class MascotaDatos
             IdCliente = Convert.ToInt32(dr["id_cliente"]),
             Nombre = Convert.ToString(dr["nombre"]) ?? "",
             Especie = Convert.ToString(dr["especie"]) ?? "",
-            Raza = dr["raza"] == DBNull.Value ? null : Convert.ToString(dr["raza"]),
-            Sexo = dr["sexo"] == DBNull.Value ? null : Convert.ToString(dr["sexo"]),
-            FechaNacimiento = dr["fecha_nacimiento"] == DBNull.Value ? null : Convert.ToDateTime(dr["fecha_nacimiento"]),
-            Color = dr["color"] == DBNull.Value ? null : Convert.ToString(dr["color"]),
-            SenasParticulares = dr["senas_particulares"] == DBNull.Value ? null : Convert.ToString(dr["senas_particulares"]),
 
-            EdadAproximada = dr["edad_aproximada"] == DBNull.Value ? null : Convert.ToString(dr["edad_aproximada"]),
-            Tamano = dr["tamano"] == DBNull.Value ? null : Convert.ToString(dr["tamano"]),
-            Esterilizado = dr["esterilizado"] == DBNull.Value ? null : Convert.ToString(dr["esterilizado"]),
-            Vacunas = dr["vacunas"] == DBNull.Value ? null : Convert.ToString(dr["vacunas"]),
-            Alergias = dr["alergias"] == DBNull.Value ? null : Convert.ToString(dr["alergias"]),
-            Observaciones = dr["observaciones"] == DBNull.Value ? null : Convert.ToString(dr["observaciones"])
+            Raza = dr["raza"] == DBNull.Value
+                ? null : Convert.ToString(dr["raza"]),
+
+            Sexo = dr["sexo"] == DBNull.Value
+                ? null : Convert.ToString(dr["sexo"]),
+
+            FechaNacimiento = dr["fecha_nacimiento"] == DBNull.Value
+                ? null : Convert.ToDateTime(dr["fecha_nacimiento"]),
+
+            Color = dr["color"] == DBNull.Value
+                ? null : Convert.ToString(dr["color"]),
+
+            SenasParticulares = dr["senas_particulares"] == DBNull.Value
+                ? null : Convert.ToString(dr["senas_particulares"])
         };
     }
 }
