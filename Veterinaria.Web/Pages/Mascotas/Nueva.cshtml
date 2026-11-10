@@ -1,0 +1,75 @@
+﻿@page
+@model Veterinaria.Web.Pages.Mascotas.NuevaModel
+@{
+    ViewData["Title"] = "Nueva Mascota";
+}
+
+<h2>Registrar mascota</h2>
+@if (!string.IsNullOrWhiteSpace(Model.Error))
+{
+    <div class="alert alert-danger">
+        @Model.Error
+    </div>
+}
+<form method="post" class="card border-0 shadow-sm p-4">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label asp-for="Mascota.IdCliente" class="form-label">Propietario</label>
+            <select asp-for="Mascota.IdCliente" asp-items="Model.Clientes" class="form-select">
+                <option value="">Selecciona un propietario</option>
+            </select>
+            <span asp-validation-for="Mascota.IdCliente" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Mascota.Nombre" class="form-label">Nombre</label>
+            <input asp-for="Mascota.Nombre" class="form-control" />
+            <span asp-validation-for="Mascota.Nombre" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Mascota.Especie" class="form-label">Especie</label>
+            <select asp-for="Mascota.Especie" class="form-select">
+                <option value="">Selecciona</option>
+                <option>Perro</option>
+                <option>Gato</option>
+                <option>Ave</option>
+                <option>Roedor</option>
+                <option>Reptil</option>
+                <option>Otra</option>
+            </select>
+            <span asp-validation-for="Mascota.Especie" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Mascota.Raza" class="form-label">Raza</label>
+            <input asp-for="Mascota.Raza" class="form-control" />
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Mascota.Sexo" class="form-label">Sexo</label>
+            <select asp-for="Mascota.Sexo" class="form-select">
+                <option value="">Selecciona</option>
+                <option>Macho</option>
+                <option>Hembra</option>
+            </select>
+            <span asp-validation-for="Mascota.Sexo" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
+            <label asp-for="Mascota.Color" class="form-label">Color / señas particulares</label>
+            <input asp-for="Mascota.Color" class="form-control" />
+        </div>
+    </div>
+
+    <div class="mt-4">
+        <button class="btn btn-primary">Guardar mascota</button>
+        <a asp-page="./Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
