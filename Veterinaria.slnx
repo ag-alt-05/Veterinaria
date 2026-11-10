@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Veterinaria.Datos/Veterinaria.Datos.csproj" Id="05de5007-17fb-4d54-8834-b556972e8736" />
+  <Project Path="Veterinaria.Entidades/Veterinaria.Entidades.csproj" Id="30f596e9-9acb-4128-b467-e39d08ba264e" />
+  <Project Path="Veterinaria.Negocios/Veterinaria.Negocios.csproj" Id="c2edcc87-2c86-4585-95fe-0ffccb2c0c52" />
+  <Project Path="Veterinaria.Web/Veterinaria.Web.csproj" Id="4709e631-975f-4f26-af8e-dbd21afb5855" />
+</Solution>
