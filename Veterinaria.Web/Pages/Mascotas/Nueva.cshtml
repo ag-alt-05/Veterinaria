@@ -59,6 +59,17 @@
         </div>
 
         <div class="col-md-6">
+            <label asp-for="Mascota.FechaNacimiento" class="form-label">
+                Fecha de nacimiento
+            </label>
+            <input asp-for="Mascota.FechaNacimiento"
+                   type="date"
+                   class="form-control" />
+            <span asp-validation-for="Mascota.FechaNacimiento"
+                  class="text-danger"></span>
+        </div>
+
+        <div class="col-md-6">
             <label asp-for="Mascota.Color" class="form-label">Color / señas particulares</label>
             <input asp-for="Mascota.Color" class="form-control" />
         </div>

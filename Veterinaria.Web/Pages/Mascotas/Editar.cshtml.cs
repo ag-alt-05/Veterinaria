@@ -59,6 +59,16 @@ public class EditarModel : PageModel
             );
         }
 
+        // Comprobar que la fecha de nacimiento no sea futura
+        if (Mascota.FechaNacimiento.HasValue &&
+            Mascota.FechaNacimiento.Value.Date > DateTime.Today)
+        {
+            ModelState.AddModelError(
+                "Mascota.FechaNacimiento",
+                "La fecha de nacimiento no puede ser futura."
+            );
+        }
+
         if (!ModelState.IsValid)
             return Page();
 

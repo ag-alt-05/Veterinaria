@@ -118,34 +118,64 @@ public class MascotaDatos
         using MySqlCommand cmd = new(sql, cn);
 
         AgregarParametros(cmd, mascota);
+
         cmd.Parameters.AddWithValue("@idMascota", mascota.IdMascota);
 
         return cmd.ExecuteNonQuery() > 0;
     }
 
-    private static void AgregarParametros(
-        MySqlCommand cmd,
-        Mascota mascota)
+    public bool TieneConsultas(int idMascota)
+    {
+        using MySqlConnection cn = Conexion.Crear();
+        cn.Open();
+
+        const string sql = """
+            SELECT COUNT(*)
+            FROM consulta
+            WHERE id_mascota = @idMascota;
+            """;
+
+        using MySqlCommand cmd = new(sql, cn);
+        cmd.Parameters.AddWithValue("@idMascota", idMascota);
+
+        return Convert.ToInt32(cmd.ExecuteScalar()) > 0;
+    }
+
+    public bool Eliminar(int idMascota)
+    {
+        using MySqlConnection cn = Conexion.Crear();
+        cn.Open();
+
+        const string sql = """
+            DELETE FROM mascota
+            WHERE id_mascota = @idMascota;
+            """;
+
+        using MySqlCommand cmd = new(sql, cn);
+        cmd.Parameters.AddWithValue("@idMascota", idMascota);
+
+        return cmd.ExecuteNonQuery() > 0;
+    }
+
+    private static void AgregarParametros(MySqlCommand cmd, Mascota mascota)
     {
         cmd.Parameters.AddWithValue("@idCliente", mascota.IdCliente);
         cmd.Parameters.AddWithValue("@nombre", mascota.Nombre);
         cmd.Parameters.AddWithValue("@especie", mascota.Especie);
 
-        cmd.Parameters.AddWithValue(
-            "@raza", (object?)mascota.Raza ?? DBNull.Value);
+        cmd.Parameters.AddWithValue("@raza",
+            (object?)mascota.Raza ?? DBNull.Value);
 
-        cmd.Parameters.AddWithValue(
-            "@sexo", (object?)mascota.Sexo ?? DBNull.Value);
+        cmd.Parameters.AddWithValue("@sexo",
+            (object?)mascota.Sexo ?? DBNull.Value);
 
-        cmd.Parameters.AddWithValue(
-            "@fechaNacimiento",
+        cmd.Parameters.AddWithValue("@fechaNacimiento",
             (object?)mascota.FechaNacimiento ?? DBNull.Value);
 
-        cmd.Parameters.AddWithValue(
-            "@color", (object?)mascota.Color ?? DBNull.Value);
+        cmd.Parameters.AddWithValue("@color",
+            (object?)mascota.Color ?? DBNull.Value);
 
-        cmd.Parameters.AddWithValue(
-            "@senasParticulares",
+        cmd.Parameters.AddWithValue("@senasParticulares",
             (object?)mascota.SenasParticulares ?? DBNull.Value);
     }
 

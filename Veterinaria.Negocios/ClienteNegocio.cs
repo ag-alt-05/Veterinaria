@@ -36,6 +36,18 @@ public class ClienteNegocio
         return _datos.Modificar(cliente);
     }
 
+    public bool Eliminar(int idCliente)
+    {
+        if (idCliente <= 0)
+            throw new ArgumentException("Cliente no válido.");
+
+        if (_datos.TieneMascotas(idCliente))
+            throw new ReglaNegocioException(
+                "No se puede eliminar el cliente porque tiene mascotas registradas.");
+
+        return _datos.Eliminar(idCliente);
+    }
+
     private static void Validar(Cliente cliente)
     {
         if (string.IsNullOrWhiteSpace(cliente.Nombre))

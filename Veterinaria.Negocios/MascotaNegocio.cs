@@ -36,6 +36,18 @@ public class MascotaNegocio
         return _datos.Modificar(mascota);
     }
 
+    public bool Eliminar(int idMascota)
+    {
+        if (idMascota <= 0)
+            throw new ArgumentException("Mascota no válida.");
+
+        if (_datos.TieneConsultas(idMascota))
+            throw new ReglaNegocioException(
+                "No se puede eliminar la mascota porque tiene consultas registradas.");
+
+        return _datos.Eliminar(idMascota);
+    }
+
     private static void Validar(Mascota mascota)
     {
         if (mascota.IdCliente <= 0)
