@@ -4,82 +4,175 @@
     ViewData["Title"] = "Clientes";
 }
 
-<h2 class="fw-bold mb-3">Clientes</h2>
+<div class="container py-4">
 
-@if (!string.IsNullOrWhiteSpace(Model.Error))
-{
-    <div class="alert alert-danger">
-        @Model.Error
-    </div>
-}
+    <!-- ENCABEZADO -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+        <div>
+            <span class="text-uppercase fw-bold small text-success">Administración</span>
+            <h2 class="fw-bold mb-1">Clientes</h2>
+            <p class="text-muted mb-0">Administra la información de los propietarios de las mascotas.</p>
+        </div>
 
-@if (TempData["Mensaje"] != null)
-{
-    <div class="alert alert-success">
-        @TempData["Mensaje"]
-    </div>
-}
-
-<div class="d-flex justify-content-between mb-3">
-    <p class="text-muted">Administración de propietarios</p>
-    <a asp-page="./Nuevo" class="btn btn-primary">+ Nuevo cliente</a>
-</div>
-
-<form method="get" class="row g-2 mb-4">
-    <div class="col-md-8">
-        <input asp-for="Buscar" class="form-control"
-               placeholder="Buscar por nombre, teléfono o correo" />
+        <a asp-page="./Nuevo" class="btn btn-primary">
+            <i class="bi bi-person-plus-fill me-2"></i>
+            Nuevo cliente
+        </a>
     </div>
 
-    <div class="col-md-4">
-        <button class="btn btn-outline-primary">Buscar</button>
-        <a asp-page="./Index" class="btn btn-outline-secondary">Limpiar</a>
+    <!-- MENSAJES -->
+    @if (!string.IsNullOrWhiteSpace(Model.Error))
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            @Model.Error
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+    }
+
+    @if (TempData["Mensaje"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            @TempData["Mensaje"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+    }
+
+    <!-- BÚSQUEDA -->
+    <div class="card clientes-busqueda border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3 align-items-end">
+
+                <div class="col-lg-8">
+                    <label asp-for="Buscar" class="form-label fw-semibold">
+                        Buscar cliente
+                    </label>
+
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                        </span>
+
+                        <input asp-for="Buscar"
+                               class="form-control"
+                               placeholder="Nombre, teléfono o correo..." />
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-flex gap-2">
+                    <button type="submit" class="btn btn-primary flex-grow-1">
+                        Buscar
+                    </button>
+
+                    <a asp-page="./Index" class="btn btn-outline-secondary">
+                        Limpiar
+                    </a>
+                </div>
+
+            </form>
+        </div>
     </div>
-</form>
 
-<div class="card border-0 shadow-sm">
-    <div class="card-body table-responsive">
-        <table class="table table-hover align-middle">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Teléfono</th>
-                    <th>Correo</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
+    <!-- TABLA DE CLIENTES -->
+    <div class="card clientes-tabla border-0 shadow-sm">
 
-            <tbody>
-                @foreach (var c in Model.Clientes)
-                {
-                    <tr>
-                        <td>
-                            @c.Nombre @c.ApellidoPaterno @c.ApellidoMaterno
-                        </td>
-                        <td>@c.Telefono</td>
-                        <td>@c.Correo</td>
+        <div class="card-header bg-transparent border-0 px-4 pt-4">
+            <h5 class="fw-bold mb-1">
+                <i class="bi bi-people-fill me-2 text-success"></i>
+                Lista de clientes
+            </h5>
+            <p class="text-muted small mb-0">
+                Información registrada en el sistema.
+            </p>
+        </div>
 
-                        <td>
-                            <a asp-page="./Detalle" asp-route-id="@c.IdCliente"
-                               class="btn btn-sm btn-outline-primary">Ver</a>
+        <div class="card-body px-4 pb-4">
 
-                            <a asp-page="./Editar" asp-route-id="@c.IdCliente"
-                               class="btn btn-sm btn-outline-secondary">Editar</a>
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
 
-                            <a asp-page="/Mascotas/Index" asp-route-idCliente="@c.IdCliente"
-                               class="btn btn-sm btn-outline-success">Mascotas</a>
+                    <thead>
+                        <tr>
+                            <th>Nombre completo</th>
+                            <th>Teléfono</th>
+                            <th>Correo electrónico</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                    </thead>
 
-                            <a asp-page="./Eliminar" asp-route-id="@c.IdCliente"
-                               class="btn btn-sm btn-outline-danger">Eliminar</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+                    <tbody>
+                        @foreach (var c in Model.Clientes)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="fw-semibold">
+                                        @c.Nombre @c.ApellidoPaterno @c.ApellidoMaterno
+                                    </div>
+                                </td>
 
-        @if (!Model.Clientes.Any())
-        {
-            <p class="text-center text-muted">No se encontraron clientes.</p>
-        }
+                                <td>
+                                    <i class="bi bi-telephone me-2 text-muted"></i>
+                                    @c.Telefono
+                                </td>
+
+                                <td>
+                                    <i class="bi bi-envelope me-2 text-muted"></i>
+                                    @c.Correo
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-content-center flex-wrap gap-1">
+
+                                        <a asp-page="./Detalle"
+                                           asp-route-id="@c.IdCliente"
+                                           class="btn btn-sm btn-outline-primary"
+                                           title="Ver detalles">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+
+                                        <a asp-page="./Editar"
+                                           asp-route-id="@c.IdCliente"
+                                           class="btn btn-sm btn-outline-secondary"
+                                           title="Editar cliente">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+
+                                        <a asp-page="/Mascotas/Index"
+                                           asp-route-idCliente="@c.IdCliente"
+                                           class="btn btn-sm btn-outline-success"
+                                           title="Ver mascotas">
+                                            <i class="bi bi-heart"></i>
+                                        </a>
+
+                                        <a asp-page="./Eliminar"
+                                           asp-route-id="@c.IdCliente"
+                                           class="btn btn-sm btn-outline-danger"
+                                           title="Eliminar cliente">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+
+            @if (!Model.Clientes.Any())
+            {
+                <div class="clientes-vacio text-center py-5">
+                    <i class="bi bi-people display-4 text-muted"></i>
+                    <h5 class="fw-bold mt-3">No se encontraron clientes</h5>
+                    <p class="text-muted mb-0">
+                        Intenta modificar tu búsqueda o registra un nuevo cliente.
+                    </p>
+                </div>
+            }
+
+        </div>
     </div>
+
 </div>

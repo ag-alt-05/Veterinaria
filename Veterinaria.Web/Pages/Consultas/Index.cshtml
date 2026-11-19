@@ -1,4 +1,111 @@
 ﻿@page
-@model Veterinaria.Web.Pages.Consultas.IndexModel
 @{
+    ViewData["Title"] = "Consultas";
 }
+
+<div class="container py-4">
+
+    <!-- ENCABEZADO -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+        <div>
+            <span class="text-uppercase fw-bold small text-success">Administración</span>
+            <h2 class="fw-bold mb-1">Consultas</h2>
+            <p class="text-muted mb-0">Administra el historial de consultas médicas de las mascotas.</p>
+        </div>
+
+        <a asp-page="./Nuevo" class="btn btn-primary">
+            <i class="bi bi-plus-circle-fill me-2"></i>
+            Nueva consulta
+        </a>
+    </div>
+
+    <!-- BÚSQUEDA -->
+    <div class="card clientes-busqueda border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3 align-items-end">
+
+                <div class="col-lg-8">
+                    <label class="form-label fw-semibold">Buscar consulta</label>
+
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                        </span>
+
+                        <input type="text"
+                               name="buscar"
+                               class="form-control"
+                               placeholder="Mascota, veterinario o diagnóstico..." />
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-flex gap-2">
+                    <button type="submit" class="btn btn-primary flex-grow-1">
+                        Buscar
+                    </button>
+
+                    <a asp-page="./Index" class="btn btn-outline-secondary">
+                        Limpiar
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- TABLA DE CONSULTAS -->
+    <div class="card clientes-tabla border-0 shadow-sm">
+
+        <div class="card-header bg-transparent border-0 px-4 pt-4">
+            <h5 class="fw-bold mb-1">
+                <i class="bi bi-clipboard2-pulse-fill me-2 text-success"></i>
+                Historial de consultas
+            </h5>
+
+            <p class="text-muted small mb-0">
+                Registro de las atenciones médicas realizadas.
+            </p>
+        </div>
+
+        <div class="card-body px-4 pb-4">
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Mascota</th>
+                            <th>Veterinario</th>
+                            <th>Motivo</th>
+                            <th>Diagnóstico</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- Los registros se mostrarán aquí posteriormente. -->
+                    </tbody>
+
+                </table>
+            </div>
+
+            <div class="clientes-vacio text-center py-5">
+                <i class="bi bi-clipboard2-pulse display-4 text-muted"></i>
+
+                <h5 class="fw-bold mt-3">No hay consultas registradas</h5>
+
+                <p class="text-muted mb-3">
+                    Cuando registres una consulta, aparecerá en este apartado.
+                </p>
+
+                <a asp-page="./Nuevo" class="btn btn-primary">
+                    <i class="bi bi-plus-circle me-2"></i>
+                    Registrar primera consulta
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
