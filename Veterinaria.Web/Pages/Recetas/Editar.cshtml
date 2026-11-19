@@ -1,0 +1,232 @@
+﻿@page "{id:int}"
+@model Veterinaria.Web.Pages.Recetas.EditarModel
+@{
+    ViewData["Title"] = "Editar Receta";
+}
+
+<div class="container py-4">
+
+    <!-- ENCABEZADO -->
+    <div class="mb-4">
+        <a asp-page="Index" class="text-decoration-none text-success small fw-semibold">
+            <i class="bi bi-arrow-left me-1"></i> Volver a recetas
+        </a>
+
+        <div class="mt-3">
+            <span class="text-uppercase fw-bold small text-success">
+                Expedientes médicos
+            </span>
+            <h2 class="fw-bold mb-1">
+                <i class="bi bi-pencil-square me-2 text-success"></i>
+                Editar receta #@Model.Receta.IdReceta
+            </h2>
+            <p class="text-muted mb-0">
+                Modifica la información de la receta y su medicamento.
+            </p>
+        </div>
+    </div>
+
+    <!-- ERRORES -->
+    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+    <form method="post">
+
+        <input type="hidden" asp-for="Receta.IdReceta" />
+        <input type="hidden" asp-for="Detalle.IdDetalle" />
+
+        <!-- INFORMACIÓN DE LA RECETA -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-transparent border-0 pt-4 px-4">
+                <h5 class="fw-bold mb-1">
+                    <i class="bi bi-file-medical text-success me-2"></i>
+                    Información de la receta
+                </h5>
+                <p class="text-muted small mb-0">
+                    Modifica la consulta, fecha e indicaciones generales.
+                </p>
+            </div>
+
+            <div class="card-body p-4">
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <label asp-for="Receta.IdConsulta" class="form-label fw-semibold">
+                            Consulta médica *
+                        </label>
+
+                        <select asp-for="Receta.IdConsulta" class="form-select">
+                            <option value="0">Selecciona una consulta</option>
+
+                            @foreach (var consulta in Model.Consultas)
+                            {
+                                var mascota = Model.Mascotas.FirstOrDefault(
+                                    m => m.IdMascota == consulta.IdMascota);
+
+                                var veterinario = Model.Veterinarios.FirstOrDefault(
+                                    v => v.IdVeterinario == consulta.IdVeterinario);
+
+                                <option value="@consulta.IdConsulta">
+                                    Consulta #@consulta.IdConsulta -
+                                    @(mascota?.Nombre ?? "Mascota no disponible") -
+                                    @(veterinario == null
+                                        ? "Veterinario no disponible"
+                                        : $"{veterinario.Nombre} {veterinario.ApellidoPaterno}")
+                                </option>
+                            }
+                        </select>
+
+                        <span asp-validation-for="Receta.IdConsulta"
+                              class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Receta.Fecha" class="form-label fw-semibold">
+                            Fecha de emisión *
+                        </label>
+
+                        <input asp-for="Receta.Fecha"
+                               type="datetime-local"
+                               class="form-control" />
+
+                        <span asp-validation-for="Receta.Fecha"
+                              class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-12">
+                        <label asp-for="Receta.IndicacionesGenerales"
+                               class="form-label fw-semibold">
+                            Indicaciones generales
+                        </label>
+
+                        <textarea asp-for="Receta.IndicacionesGenerales"
+                                  class="form-control"
+                                  rows="3"
+                                  placeholder="Recomendaciones generales para el propietario..."></textarea>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- MEDICAMENTO -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-transparent border-0 pt-4 px-4">
+                <h5 class="fw-bold mb-1">
+                    <i class="bi bi-capsule text-success me-2"></i>
+                    Medicamento indicado
+                </h5>
+                <p class="text-muted small mb-0">
+                    Modifica el medicamento y sus instrucciones.
+                </p>
+            </div>
+
+            <div class="card-body p-4">
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <label asp-for="Detalle.IdMedicamento"
+                               class="form-label fw-semibold">
+                            Medicamento *
+                        </label>
+
+                        <select asp-for="Detalle.IdMedicamento" class="form-select">
+                            <option value="0">Selecciona un medicamento</option>
+
+                            @foreach (var medicamento in Model.Medicamentos)
+                            {
+                                <option value="@medicamento.IdMedicamento">
+                                    @medicamento.Nombre
+                                    @if (!string.IsNullOrWhiteSpace(medicamento.Concentracion))
+                                    {
+                                        @($" - {medicamento.Concentracion}")
+                                    }
+                                </option>
+                            }
+                        </select>
+
+                        <span asp-validation-for="Detalle.IdMedicamento"
+                              class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Detalle.Dosis"
+                               class="form-label fw-semibold">
+                            Dosis *
+                        </label>
+
+                        <input asp-for="Detalle.Dosis"
+                               class="form-control"
+                               placeholder="Ej. 1 tableta" />
+
+                        <span asp-validation-for="Detalle.Dosis"
+                              class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Detalle.Frecuencia"
+                               class="form-label fw-semibold">
+                            Frecuencia
+                        </label>
+
+                        <input asp-for="Detalle.Frecuencia"
+                               class="form-control"
+                               placeholder="Ej. Cada 8 horas" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Detalle.Duracion"
+                               class="form-label fw-semibold">
+                            Duración
+                        </label>
+
+                        <input asp-for="Detalle.Duracion"
+                               class="form-control"
+                               placeholder="Ej. Durante 5 días" />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Detalle.ViaAdministracion"
+                               class="form-label fw-semibold">
+                            Vía de administración
+                        </label>
+
+                        <input asp-for="Detalle.ViaAdministracion"
+                               class="form-control"
+                               placeholder="Ej. Oral, tópica, intravenosa..." />
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Detalle.Indicaciones"
+                               class="form-label fw-semibold">
+                            Indicaciones adicionales
+                        </label>
+
+                        <input asp-for="Detalle.Indicaciones"
+                               class="form-control"
+                               placeholder="Instrucciones adicionales..." />
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTONES -->
+        <div class="d-flex justify-content-end gap-2">
+            <a asp-page="Index" class="btn btn-outline-secondary">
+                <i class="bi bi-x-circle me-1"></i>
+                Cancelar
+            </a>
+
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-check-circle me-1"></i>
+                Guardar cambios
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
