@@ -1,0 +1,178 @@
+﻿@page
+@model Veterinaria.Web.Pages.Veterinarios.IndexModel
+@{
+    ViewData["Title"] = "Veterinarios";
+}
+
+<div class="container py-4">
+
+    <!-- ENCABEZADO -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+        <div>
+            <span class="text-uppercase fw-bold small text-success">Administración</span>
+            <h2 class="fw-bold mb-1">Veterinarios</h2>
+            <p class="text-muted mb-0">Administra la información del personal veterinario.</p>
+        </div>
+
+        <a asp-page="./Nuevo" class="btn btn-primary">
+            <i class="bi bi-person-plus-fill me-2"></i>
+            Nuevo veterinario
+        </a>
+    </div>
+
+    <!-- MENSAJES -->
+    @if (!string.IsNullOrWhiteSpace(Model.Error))
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <i class="bi bi-exclamation-triangle-fill me-2"></i>
+            @Model.Error
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+    }
+
+    @if (TempData["Mensaje"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <i class="bi bi-check-circle-fill me-2"></i>
+            @TempData["Mensaje"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Cerrar"></button>
+        </div>
+    }
+
+    <!-- BÚSQUEDA -->
+    <div class="card clientes-busqueda border-0 shadow-sm mb-4">
+        <div class="card-body">
+            <form method="get" class="row g-3 align-items-end">
+
+                <div class="col-lg-8">
+                    <label asp-for="Buscar" class="form-label fw-semibold">
+                        Buscar veterinario
+                    </label>
+
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="bi bi-search"></i>
+                        </span>
+
+                        <input asp-for="Buscar"
+                               class="form-control"
+                               placeholder="Nombre, cédula o especialidad..." />
+                    </div>
+                </div>
+
+                <div class="col-lg-4 d-flex gap-2">
+                    <button type="submit" class="btn btn-primary flex-grow-1">
+                        Buscar
+                    </button>
+
+                    <a asp-page="./Index" class="btn btn-outline-secondary">
+                        Limpiar
+                    </a>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- TABLA DE VETERINARIOS -->
+    <div class="card clientes-tabla border-0 shadow-sm">
+
+        <div class="card-header bg-transparent border-0 px-4 pt-4">
+            <h5 class="fw-bold mb-1">
+                <i class="bi bi-person-badge-fill me-2 text-success"></i>
+                Lista de veterinarios
+            </h5>
+            <p class="text-muted small mb-0">
+                Información registrada en el sistema.
+            </p>
+        </div>
+
+        <div class="card-body px-4 pb-4">
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle mb-0">
+
+                    <thead>
+                        <tr>
+                            <th>Nombre completo</th>
+                            <th>Cédula profesional</th>
+                            <th>Especialidad</th>
+                            <th>Teléfono</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var v in Model.Veterinarios)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="fw-semibold">
+                                        @v.Nombre @v.ApellidoPaterno @v.ApellidoMaterno
+                                    </div>
+                                </td>
+
+                                <td>
+                                    <i class="bi bi-card-text me-2 text-muted"></i>
+                                    @(string.IsNullOrWhiteSpace(v.Cedula) ? "No registrada" : v.Cedula)
+                                </td>
+
+                                <td>
+                                    <span class="badge bg-success-subtle text-success">
+                                        @v.Especialidad
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <i class="bi bi-telephone me-2 text-muted"></i>
+                                    @(string.IsNullOrWhiteSpace(v.Telefono) ? "No registrado" : v.Telefono)
+                                </td>
+
+                                <td>
+                                    <div class="d-flex justify-content-center flex-wrap gap-1">
+
+                                        <a asp-page="./Detalle"
+                                           asp-route-id="@v.IdVeterinario"
+                                           class="btn btn-sm btn-outline-primary"
+                                           title="Ver detalles">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+
+                                        <a asp-page="./Editar"
+                                           asp-route-id="@v.IdVeterinario"
+                                           class="btn btn-sm btn-outline-secondary"
+                                           title="Editar veterinario">
+                                            <i class="bi bi-pencil-square"></i>
+                                        </a>
+
+                                        <a asp-page="./Eliminar"
+                                           asp-route-id="@v.IdVeterinario"
+                                           class="btn btn-sm btn-outline-danger"
+                                           title="Eliminar veterinario">
+                                            <i class="bi bi-trash"></i>
+                                        </a>
+
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+            </div>
+
+            @if (!Model.Veterinarios.Any())
+            {
+                <div class="clientes-vacio text-center py-5">
+                    <i class="bi bi-person-badge display-4 text-muted"></i>
+                    <h5 class="fw-bold mt-3">No se encontraron veterinarios</h5>
+                    <p class="text-muted mb-0">
+                        Intenta modificar tu búsqueda o registra un nuevo veterinario.
+                    </p>
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,109 @@
+﻿@page "{id:int}"
+@model Veterinaria.Web.Pages.Consultas.EliminarModel
+@{
+    ViewData["Title"] = "Eliminar Consulta";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-7">
+
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+
+                    <h2 class="mb-3 text-danger">
+                        <i class="bi bi-exclamation-triangle me-2"></i>
+                        Eliminar consulta
+                    </h2>
+
+                    @if (!string.IsNullOrWhiteSpace(Model.Error))
+                    {
+                        <div class="alert alert-danger">
+                            <i class="bi bi-exclamation-circle me-2"></i>
+                            @Model.Error
+                        </div>
+
+                        <a asp-page="./Index" class="btn btn-secondary">
+                            <i class="bi bi-arrow-left me-1"></i>
+                            Regresar
+                        </a>
+                    }
+                    else
+                    {
+                        <div class="alert alert-warning">
+                            <i class="bi bi-exclamation-triangle me-2"></i>
+                            ¿Estás seguro de que deseas eliminar esta consulta?
+                            Esta acción no se puede deshacer.
+                        </div>
+
+                        <div class="mb-4">
+
+                            <h5 class="fw-bold mb-3">
+                                <i class="bi bi-clipboard2-pulse me-2 text-success"></i>
+                                Información de la consulta
+                            </h5>
+
+                            <p class="mb-2">
+                                <strong>Fecha:</strong>
+                                @Model.Consulta.Fecha.ToString("dd/MM/yyyy hh:mm tt")
+                            </p>
+
+                            <p class="mb-2">
+                                <strong>Mascota:</strong>
+                                @Model.Mascota.Nombre
+                            </p>
+
+                            <p class="mb-2">
+                                <strong>Especie:</strong>
+                                @Model.Mascota.Especie
+                            </p>
+
+                            <p class="mb-2">
+                                <strong>Propietario:</strong>
+                                @Model.Propietario
+                            </p>
+
+                            <p class="mb-2">
+                                <strong>Veterinario:</strong>
+                                @Model.Veterinario.Nombre
+                                @Model.Veterinario.ApellidoPaterno
+                            </p>
+
+                            <p class="mb-2">
+                                <strong>Motivo:</strong>
+                                @(Model.Consulta.MotivoConsulta ?? "No especificado")
+                            </p>
+
+                            <p class="mb-0">
+                                <strong>Diagnóstico:</strong>
+
+                                @(string.IsNullOrWhiteSpace(Model.Consulta.Diagnostico)
+                                    ? "Pendiente"
+                                    : Model.Consulta.Diagnostico)
+                            </p>
+
+                        </div>
+
+                        <form method="post">
+                            <input type="hidden"
+                                   name="id"
+                                   value="@Model.Consulta.IdConsulta" />
+
+                            <button type="submit" class="btn btn-danger">
+                                <i class="bi bi-trash me-1"></i>
+                                Eliminar consulta
+                            </button>
+
+                            <a asp-page="./Index" class="btn btn-secondary">
+                                <i class="bi bi-x-circle me-1"></i>
+                                Cancelar
+                            </a>
+                        </form>
+                    }
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

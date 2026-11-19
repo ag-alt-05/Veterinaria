@@ -1,0 +1,262 @@
+﻿@page "{id:int}"
+@model Veterinaria.Web.Pages.Recetas.DetalleModel
+@{
+    ViewData["Title"] = "Detalle de Receta";
+}
+
+<div class="container py-4">
+
+    <!-- ENCABEZADO -->
+    <div class="mb-4">
+        <a asp-page="Index" class="text-decoration-none text-success small fw-semibold">
+            <i class="bi bi-arrow-left me-1"></i> Volver a recetas
+        </a>
+
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mt-3">
+            <div>
+                <span class="text-uppercase fw-bold small text-success">
+                    Expedientes médicos
+                </span>
+                <h2 class="fw-bold mb-1">
+                    <i class="bi bi-prescription2 me-2 text-success"></i>
+                    Receta #@Model.Receta!.IdReceta
+                </h2>
+                <p class="text-muted mb-0">
+                    Información completa de la receta médica.
+                </p>
+            </div>
+
+            <div class="d-flex gap-2">
+                <a asp-page="Editar"
+                   asp-route-id="@Model.Receta.IdReceta"
+                   class="btn btn-outline-warning">
+                    <i class="bi bi-pencil-square me-1"></i>
+                    Editar
+                </a>
+
+                <a asp-page="Eliminar"
+                   asp-route-id="@Model.Receta.IdReceta"
+                   class="btn btn-outline-danger">
+                    <i class="bi bi-trash me-1"></i>
+                    Eliminar
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- INFORMACIÓN GENERAL -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-header bg-transparent border-0 pt-4 px-4">
+            <h5 class="fw-bold mb-0">
+                <i class="bi bi-file-medical text-success me-2"></i>
+                Información general
+            </h5>
+        </div>
+
+        <div class="card-body px-4 pb-4">
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <small class="text-muted d-block">Número de receta</small>
+                    <span class="fw-semibold text-success">
+                        #@Model.Receta.IdReceta
+                    </span>
+                </div>
+
+                <div class="col-md-4">
+                    <small class="text-muted d-block">Fecha de emisión</small>
+                    <span class="fw-semibold">
+                        @Model.Receta.Fecha.ToString("dd/MM/yyyy HH:mm")
+                    </span>
+                </div>
+
+                <div class="col-md-4">
+                    <small class="text-muted d-block">Consulta relacionada</small>
+                    <span class="fw-semibold">
+                        #@Model.Receta.IdConsulta
+                    </span>
+                </div>
+
+                <div class="col-12">
+                    <small class="text-muted d-block">Indicaciones generales</small>
+
+                    @if (!string.IsNullOrWhiteSpace(Model.Receta.IndicacionesGenerales))
+                    {
+                        <p class="mb-0">
+                            @Model.Receta.IndicacionesGenerales
+                        </p>
+                    }
+                    else
+                    {
+                        <span class="text-muted">Sin indicaciones generales.</span>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MASCOTA Y PROPIETARIO -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-header bg-transparent border-0 pt-4 px-4">
+            <h5 class="fw-bold mb-0">
+                <i class="bi bi-heart-pulse text-success me-2"></i>
+                Información de la mascota
+            </h5>
+        </div>
+
+        <div class="card-body px-4 pb-4">
+            <div class="row g-4">
+
+                <div class="col-md-6">
+                    <small class="text-muted d-block">Nombre de la mascota</small>
+                    <span class="fw-semibold">
+                        @(Model.Mascota?.Nombre ?? "No disponible")
+                    </span>
+                </div>
+
+                <div class="col-md-6">
+                    <small class="text-muted d-block">Especie</small>
+                    <span class="fw-semibold">
+                        @(Model.Mascota?.Especie ?? "No disponible")
+                    </span>
+                </div>
+
+                <div class="col-md-6">
+                    <small class="text-muted d-block">Raza</small>
+                    <span class="fw-semibold">
+                        @(Model.Mascota?.Raza ?? "No especificada")
+                    </span>
+                </div>
+
+                <div class="col-md-6">
+                    <small class="text-muted d-block">Propietario</small>
+                    <span class="fw-semibold">
+                        @if (Model.Cliente != null)
+                        {
+                            @($"{Model.Cliente.Nombre} {Model.Cliente.ApellidoPaterno} {Model.Cliente.ApellidoMaterno}")
+                        }
+                        else
+                        {
+                            @("No disponible")
+                        }
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- VETERINARIO -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-header bg-transparent border-0 pt-4 px-4">
+            <h5 class="fw-bold mb-0">
+                <i class="bi bi-person-badge text-success me-2"></i>
+                Veterinario responsable
+            </h5>
+        </div>
+
+        <div class="card-body px-4 pb-4">
+            @if (Model.Veterinario != null)
+            {
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <small class="text-muted d-block">Nombre</small>
+                        <span class="fw-semibold">
+                            Dr. @Model.Veterinario.Nombre
+                            @Model.Veterinario.ApellidoPaterno
+                            @Model.Veterinario.ApellidoMaterno
+                        </span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <small class="text-muted d-block">Especialidad</small>
+                        <span class="fw-semibold">
+                            @Model.Veterinario.Especialidad
+                        </span>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <span class="text-muted">Información no disponible.</span>
+            }
+        </div>
+    </div>
+
+    <!-- MEDICAMENTOS -->
+    <div class="card border-0 shadow-sm mb-4">
+        <div class="card-header bg-transparent border-0 pt-4 px-4">
+            <h5 class="fw-bold mb-0">
+                <i class="bi bi-capsule text-success me-2"></i>
+                Medicamentos prescritos
+            </h5>
+        </div>
+
+        <div class="card-body px-4 pb-4">
+
+            @if (Model.Detalles.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Medicamento</th>
+                                <th>Dosis</th>
+                                <th>Frecuencia</th>
+                                <th>Duración</th>
+                                <th>Vía</th>
+                                <th>Indicaciones</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            @foreach (var detalle in Model.Detalles)
+                            {
+                                var medicamento = Model.Medicamentos.FirstOrDefault(
+                                    m => m.IdMedicamento == detalle.IdMedicamento);
+
+                                <tr>
+                                    <td>
+                                        <div class="fw-semibold">
+                                            @(medicamento?.Nombre ?? "No disponible")
+                                        </div>
+                                        <small class="text-muted">
+                                            @(medicamento?.Presentacion ?? "")
+                                            @(medicamento?.Concentracion ?? "")
+                                        </small>
+                                    </td>
+
+                                    <td>@detalle.Dosis</td>
+                                    <td>@(detalle.Frecuencia ?? "No especificada")</td>
+                                    <td>@(detalle.Duracion ?? "No especificada")</td>
+                                    <td>@(detalle.ViaAdministracion ?? "No especificada")</td>
+                                    <td>@(detalle.Indicaciones ?? "Sin indicaciones")</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="text-center py-4">
+                    <i class="bi bi-capsule display-4 text-muted"></i>
+                    <p class="text-muted mt-2 mb-0">
+                        Esta receta no tiene medicamentos registrados.
+                    </p>
+                </div>
+            }
+
+        </div>
+    </div>
+
+    <!-- REGRESAR -->
+    <div class="d-flex justify-content-end">
+        <a asp-page="Index" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left me-1"></i>
+            Regresar al listado
+        </a>
+    </div>
+
+</div>

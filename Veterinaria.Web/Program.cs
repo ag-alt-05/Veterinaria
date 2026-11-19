@@ -1,36 +1,17 @@
 using Veterinaria.Negocios;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Configurar la conexión con MySQL
+string cadenaConexion =
+    builder.Configuration.GetConnectionString("Veterinaria")
+    ?? throw new InvalidOperationException(
+        "No se encontró la cadena de conexión Veterinaria.");
+
+ConfiguracionNegocio.Inicializar(cadenaConexion);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
-string? cadena =
-    builder.Configuration.GetConnectionString("Veterinaria");
-
-if (!string.IsNullOrWhiteSpace(cadena))
-{
-    ConfiguracionNegocio.Inicializar(cadena);
-
-    if (builder.Environment.IsDevelopment())
-    {
-        try
-        {
-            int total = ConfiguracionNegocio.ProbarConexion();
-            Console.WriteLine(
-                $"MYSQL OK. Clientes registrados: {total}");
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(
-                $"MYSQL ERROR: {ex.Message}");
-        }
-    }
-}
-else if (builder.Environment.IsDevelopment())
-{
-    Console.WriteLine(
-        "MYSQL AVISO: no se encontró ConnectionStrings:Veterinaria. " +
-        "Configure User Secrets antes de probar la conexión.");
-}
 
 var app = builder.Build();
 
@@ -38,7 +19,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -49,6 +29,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapStaticAssets();
+
 app.MapRazorPages()
    .WithStaticAssets();
 

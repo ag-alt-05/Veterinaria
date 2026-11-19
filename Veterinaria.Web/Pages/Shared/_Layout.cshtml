@@ -1,52 +1,101 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Veterinaria.Web</title>
-    <script type="importmap"></script>
+    <title>@ViewData["Title"] - Veterinaria</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Veterinaria.Web.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Veterinaria.Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-veterinaria">
         <div class="container">
-            &copy; 2026 - Veterinaria.Web - <a asp-area="" asp-page="/Privacy">Privacy</a>
+            <a class="navbar-brand d-flex align-items-center gap-2" asp-page="/Index">
+                <span class="brand-icon">
+                    <i class="bi bi-heart-pulse-fill"></i>
+                </span>
+                <span class="brand-name">Veterinaria</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu"
+                    aria-controls="menu"
+                    aria-expanded="false"
+                    aria-label="Abrir menú">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Index">
+                            <i class="bi bi-house-door me-1"></i> Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Clientes/Index">
+                            <i class="bi bi-people me-1"></i> Clientes
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Mascotas/Index">
+                            <i class="bi bi-heart me-1"></i> Mascotas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Veterinarios/Index">
+                            <i class="bi bi-person-badge me-1"></i> Veterinarios
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Consultas/Index">
+                            <i class="bi bi-calendar2-check me-1"></i> Consultas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" asp-page="/Recetas/Index">
+                            <i class="bi bi-file-medical me-1"></i> Recetas
+                        </a>
+                    </li>
+                    <li class="nav-item ms-lg-2">
+                        <button type="button"
+                                id="boton-tema"
+                                class="btn boton-tema"
+                                aria-label="Cambiar a modo oscuro"
+                                title="Cambiar a modo oscuro">
+                            <i id="icono-tema" class="bi bi-moon-fill"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="footer-veterinaria">
+        <div class="container text-center">
+            <p class="mb-1 fw-semibold">Veterinaria</p>
+            <small>Comprometidos con el bienestar de tus mascotas.</small>
+            <div class="mt-2">
+                <small>© @DateTime.Now.Year Sistema de gestión veterinaria</small>
+            </div>
         </div>
     </footer>
 
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
