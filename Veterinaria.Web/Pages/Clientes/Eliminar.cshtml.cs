@@ -33,16 +33,16 @@ public class EliminarModel : PageModel
 
     public IActionResult OnPost(int id)
     {
-        ClienteNegocio negocio = new();
-        Cliente? cliente = negocio.BuscarPorId(id);
-
-        if (cliente is null)
-            return NotFound();
-
-        Cliente = cliente;
-
         try
         {
+            ClienteNegocio negocio = new();
+            Cliente? cliente = negocio.BuscarPorId(id);
+
+            if (cliente is null)
+                return NotFound();
+
+            Cliente = cliente;
+
             bool eliminado = negocio.Eliminar(id);
 
             if (!eliminado)

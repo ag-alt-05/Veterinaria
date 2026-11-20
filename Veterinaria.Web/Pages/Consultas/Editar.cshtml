@@ -1,0 +1,255 @@
+﻿@page "{id:int}"
+@using Microsoft.AspNetCore.Mvc.Rendering
+@model Veterinaria.Web.Pages.Consultas.EditarModel
+@{
+    ViewData["Title"] = "Editar Consulta";
+}
+
+<div class="container py-4">
+
+    <!-- ENCABEZADO -->
+    <div class="mb-4">
+        <span class="text-uppercase fw-bold small text-success">
+            Expediente médico
+        </span>
+
+        <h2 class="fw-bold mb-1">
+            <i class="bi bi-pencil-square me-2"></i>
+            Editar Consulta
+        </h2>
+
+        <p class="text-muted mb-0">
+            Modifica la información de la consulta médica.
+        </p>
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(Model.Error))
+    {
+        <div class="alert alert-danger">
+            <i class="bi bi-exclamation-triangle me-2"></i>
+            @Model.Error
+        </div>
+    }
+
+    <div asp-validation-summary="ModelOnly"
+         class="alert alert-danger">
+    </div>
+
+    <form method="post">
+
+        <input type="hidden" asp-for="Consulta.IdConsulta" />
+
+        <!-- INFORMACIÓN GENERAL -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-transparent py-3">
+                <h5 class="fw-bold mb-0">
+                    <i class="bi bi-info-circle me-2 text-success"></i>
+                    Información general
+                </h5>
+            </div>
+
+            <div class="card-body">
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <label asp-for="Consulta.IdMascota"
+                               class="form-label fw-semibold">
+                            Mascota
+                        </label>
+
+                        <select asp-for="Consulta.IdMascota"
+                                class="form-select"
+                                asp-items="@(new SelectList(Model.Mascotas, "IdMascota", "Nombre"))">
+                            <option value="">Seleccione una mascota</option>
+                        </select>
+
+                        <span asp-validation-for="Consulta.IdMascota"
+                              class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Consulta.IdVeterinario"
+                               class="form-label fw-semibold">
+                            Veterinario
+                        </label>
+
+                        <select asp-for="Consulta.IdVeterinario"
+                                class="form-select"
+                                asp-items="@(new SelectList(Model.Veterinarios, "IdVeterinario", "Nombre"))">
+                            <option value="">Seleccione un veterinario</option>
+                        </select>
+
+                        <span asp-validation-for="Consulta.IdVeterinario"
+                              class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Consulta.Fecha"
+                               class="form-label fw-semibold">
+                            Fecha y hora
+                        </label>
+
+                        <input asp-for="Consulta.Fecha"
+                               type="datetime-local"
+                               class="form-control"
+                               asp-format="{0:yyyy-MM-ddTHH:mm}" />
+
+                        <span asp-validation-for="Consulta.Fecha"
+                              class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Consulta.MotivoConsulta"
+                               class="form-label fw-semibold">
+                            Motivo de consulta
+                        </label>
+
+                        <input asp-for="Consulta.MotivoConsulta"
+                               class="form-control"
+                               placeholder="Motivo de la visita" />
+
+                        <span asp-validation-for="Consulta.MotivoConsulta"
+                              class="text-danger small"></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- EVALUACIÓN MÉDICA -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-transparent py-3">
+                <h5 class="fw-bold mb-0">
+                    <i class="bi bi-heart-pulse me-2 text-success"></i>
+                    Evaluación médica
+                </h5>
+            </div>
+
+            <div class="card-body">
+                <div class="row g-3">
+
+                    <div class="col-md-6">
+                        <label asp-for="Consulta.Peso"
+                               class="form-label fw-semibold">
+                            Peso (kg)
+                        </label>
+
+                        <input asp-for="Consulta.Peso"
+                               type="number"
+                               step="0.01"
+                               min="0"
+                               class="form-control"
+                               placeholder="Ej. 12.50" />
+
+                        <span asp-validation-for="Consulta.Peso"
+                              class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label asp-for="Consulta.Temperatura"
+                               class="form-label fw-semibold">
+                            Temperatura (°C)
+                        </label>
+
+                        <input asp-for="Consulta.Temperatura"
+                               type="number"
+                               step="0.1"
+                               min="0"
+                               class="form-control"
+                               placeholder="Ej. 38.5" />
+
+                        <span asp-validation-for="Consulta.Temperatura"
+                              class="text-danger small"></span>
+                    </div>
+
+                    <div class="col-12">
+                        <label asp-for="Consulta.Sintomas"
+                               class="form-label fw-semibold">
+                            Síntomas
+                        </label>
+
+                        <textarea asp-for="Consulta.Sintomas"
+                                  class="form-control"
+                                  rows="3"
+                                  placeholder="Describe los síntomas observados..."></textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <label asp-for="Consulta.Diagnostico"
+                               class="form-label fw-semibold">
+                            Diagnóstico
+                        </label>
+
+                        <textarea asp-for="Consulta.Diagnostico"
+                                  class="form-control"
+                                  rows="3"
+                                  placeholder="Diagnóstico médico..."></textarea>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- TRATAMIENTO Y OBSERVACIONES -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-header bg-transparent py-3">
+                <h5 class="fw-bold mb-0">
+                    <i class="bi bi-clipboard2-pulse me-2 text-success"></i>
+                    Tratamiento y observaciones
+                </h5>
+            </div>
+
+            <div class="card-body">
+                <div class="row g-3">
+
+                    <div class="col-12">
+                        <label asp-for="Consulta.Tratamiento"
+                               class="form-label fw-semibold">
+                            Tratamiento
+                        </label>
+
+                        <textarea asp-for="Consulta.Tratamiento"
+                                  class="form-control"
+                                  rows="3"
+                                  placeholder="Tratamiento indicado..."></textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <label asp-for="Consulta.Observaciones"
+                               class="form-label fw-semibold">
+                            Observaciones adicionales
+                        </label>
+
+                        <textarea asp-for="Consulta.Observaciones"
+                                  class="form-control"
+                                  rows="3"
+                                  placeholder="Observaciones adicionales..."></textarea>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTONES -->
+        <div class="d-flex justify-content-end gap-2 mb-4">
+
+            <a asp-page="./Index"
+               class="btn btn-outline-secondary">
+                <i class="bi bi-x-circle me-1"></i>
+                Cancelar
+            </a>
+
+            <button type="submit" class="btn btn-success">
+                <i class="bi bi-check-circle me-1"></i>
+                Guardar cambios
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

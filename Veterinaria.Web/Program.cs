@@ -2,18 +2,13 @@ using Veterinaria.Negocios;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Buscar la cadena de conexión de forma segura
-string? cadena = builder.Configuration.GetConnectionString("Veterinaria");
+// Configurar la conexión con MySQL
+string cadenaConexion =
+    builder.Configuration.GetConnectionString("Veterinaria")
+    ?? throw new InvalidOperationException(
+        "No se encontró la cadena de conexión Veterinaria.");
 
-if (!string.IsNullOrWhiteSpace(cadena))
-{
-    ConfiguracionNegocio.Inicializar(cadena);
-}
-else
-{
-    System.Diagnostics.Debug.WriteLine(
-        "AVISO: No se encontró ConnectionStrings:Veterinaria. Revise User Secrets.");
-}
+ConfiguracionNegocio.Inicializar(cadenaConexion);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -28,8 +23,11 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
 app.UseRouting();
+
 app.UseAuthorization();
+
 app.MapStaticAssets();
 
 app.MapRazorPages()
