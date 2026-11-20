@@ -15,8 +15,7 @@ Al ingresar al sistema, se muestra la página principal. Desde el menú de naveg
 
 Para utilizar las funciones de clientes y mascotas, se deben seleccionar las opciones correspondientes en el menú.
 
-![Pantalla principal del sistema](img/manual/inicio.png)
-
+![Pantalla principal](Veterinaria.Web/wwwroot/images/manual/inicio.png)
 
 ---
 
@@ -29,7 +28,7 @@ Para consultar los clientes registrados:
 3. En la tabla se puede consultar la información principal de cada cliente.
 4. Desde las acciones disponibles se puede acceder a sus detalles, editar su información o intentar eliminarlo.
 
-![Listado de clientes](img/manual/clientes.png)
+![Listado de clientes](Veterinaria.Web/wwwroot/images/manual/clientes.png)
 
 ---
 
@@ -46,7 +45,7 @@ Para realizar una búsqueda:
 
 Para volver a consultar todos los clientes, se puede limpiar el campo de búsqueda y realizar nuevamente la consulta.
 
-![Búsqueda de clientes](img/manual/buscar_cliente.png)
+![Búsqueda de clientes](Veterinaria.Web/wwwroot/images/manual/buscar_cliente.png)
 
 ---
 
@@ -62,7 +61,7 @@ Para registrar un nuevo cliente:
 
 Si el registro se realiza correctamente, el sistema mostrará un mensaje de confirmación.
 
-![Formulario para registrar un cliente](img/manual/registrar_cliente.png)
+![Formulario para registrar un cliente](Veterinaria.Web/wwwroot/images/manual/registrar_cliente.png)
 
 ---
 
@@ -78,7 +77,7 @@ Para modificar la información de un cliente:
 
 El sistema actualizará la información y mostrará un mensaje de confirmación.
 
-![Formulario para editar un cliente](img/manual/editar_cliente.png)
+![Formulario para editar un cliente](Veterinaria.Web/wwwroot/images/manual/editar_cliente.png)
 
 ---
 
@@ -93,7 +92,7 @@ Para consultar toda la información de un cliente:
 
 En esta sección se pueden consultar sus datos personales y de contacto.
 
-![Detalle de un cliente](img/manual/detalle_cliente.png)
+![Detalle de un cliente](Veterinaria.Web/wwwroot/images/manual/detalle_cliente.png)
 
 ---
 
@@ -110,7 +109,7 @@ Para hacerlo:
 
 Esta función permite identificar rápidamente qué animales están registrados a nombre de cada cliente.
 
-![Mascotas asociadas a un cliente](img/manual/mascotas_cliente.png)
+![Mascotas asociadas a un cliente](Veterinaria.Web/wwwroot/images/manual/mascotas_cliente.png)
 
 ---
 
@@ -126,7 +125,7 @@ Para consultar las mascotas registradas:
 
 En el listado también se encuentran disponibles las acciones para consultar detalles, editar y eliminar registros.
 
-![Listado y búsqueda de mascotas](img/manual/mascotas.png)
+![Listado y búsqueda de mascotas](Veterinaria.Web/wwwroot/images/manual//mascotas.png)
 
 ---
 
@@ -143,7 +142,7 @@ Para registrar una nueva mascota:
 
 Si el registro se realiza correctamente, el sistema mostrará un mensaje de confirmación.
 
-![Formulario para registrar una mascota](img/manual/registrar_mascota.png)
+![Formulario para registrar una mascota](Veterinaria.Web/wwwroot/images/manual/registrar_mascota.png)
 
 ---
 
@@ -159,7 +158,7 @@ Para modificar la información de una mascota:
 
 El sistema actualizará la información de la mascota.
 
-![Formulario para editar una mascota](img/manual/editar_mascota.png)
+![Formulario para editar una mascota](Veterinaria.Web/wwwroot/images/manual//editar_mascota.png)
 
 ---
 
@@ -174,7 +173,7 @@ Para consultar la información completa de una mascota:
 
 En esta sección se pueden consultar sus características y los datos relacionados con su propietario.
 
-![Detalle de una mascota](img/manual/detalle_mascota.png)
+![Detalle de una mascota](Veterinaria.Web/wwwroot/images/manual/detalle_mascota.png)
 
 ---
 
