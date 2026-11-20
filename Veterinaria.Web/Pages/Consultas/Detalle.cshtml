@@ -1,0 +1,224 @@
+﻿@page "{id:int}"
+@model Veterinaria.Web.Pages.Consultas.DetalleModel
+
+@{
+    ViewData["Title"] = "Detalle de Consulta";
+}
+
+<div class="container py-4">
+
+    <!-- ENCABEZADO -->
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+        <div>
+            <span class="text-uppercase fw-bold small text-success">
+                Administración / Consultas
+            </span>
+
+            <h2 class="fw-bold mb-1">
+                <i class="bi bi-clipboard2-pulse me-2"></i>
+                Detalle de consulta
+            </h2>
+
+            <p class="text-muted mb-0">
+                Información completa de la atención médica.
+            </p>
+        </div>
+
+        <a asp-page="./Index" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left me-1"></i>
+            Volver al historial
+        </a>
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(Model.Error))
+    {
+        <div class="alert alert-danger">
+            <i class="bi bi-exclamation-triangle me-2"></i>
+            @Model.Error
+        </div>
+    }
+
+    @if (Model.Consulta.IdConsulta > 0)
+    {
+        <!-- INFORMACIÓN GENERAL -->
+        <div class="card border-0 shadow-sm mb-4">
+
+            <div class="card-header bg-transparent py-3">
+                <h5 class="fw-bold mb-0">
+                    <i class="bi bi-info-circle text-success me-2"></i>
+                    Información general
+                </h5>
+            </div>
+
+            <div class="card-body p-4">
+                <div class="row g-4">
+
+                    <div class="col-md-6">
+                        <span class="text-muted small">Número de consulta</span>
+                        <div class="fw-bold fs-5">
+                            #@Model.Consulta.IdConsulta
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <span class="text-muted small">Fecha y hora</span>
+                        <div class="fw-semibold">
+                            @Model.Consulta.Fecha.ToString("dd/MM/yyyy")
+                            <span class="text-muted ms-1">
+                                @Model.Consulta.Fecha.ToString("hh:mm tt")
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <span class="text-muted small">Mascota</span>
+                        <div class="fw-semibold">
+                            <i class="bi bi-heart-fill text-success me-1"></i>
+                            @Model.Mascota.Nombre
+                        </div>
+                        <small class="text-muted">
+                            @Model.Mascota.Especie
+                            @if (!string.IsNullOrWhiteSpace(Model.Mascota.Raza))
+                            {
+                                <span> - @Model.Mascota.Raza</span>
+                            }
+                        </small>
+                    </div>
+
+                    <div class="col-md-6">
+                        <span class="text-muted small">Propietario</span>
+                        <div class="fw-semibold">
+                            <i class="bi bi-person-fill text-success me-1"></i>
+                            @Model.Propietario
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <span class="text-muted small">Veterinario responsable</span>
+                        <div class="fw-semibold">
+                            @Model.Veterinario.Nombre
+                            @Model.Veterinario.ApellidoPaterno
+                            @Model.Veterinario.ApellidoMaterno
+                        </div>
+                        <small class="text-muted">
+                            @Model.Veterinario.Especialidad
+                        </small>
+                    </div>
+
+                    <div class="col-md-6">
+                        <span class="text-muted small">Motivo de consulta</span>
+                        <div class="fw-semibold">
+                            @(string.IsNullOrWhiteSpace(Model.Consulta.MotivoConsulta)
+                                ? "No especificado"
+                                : Model.Consulta.MotivoConsulta)
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- EVALUACIÓN MÉDICA -->
+        <div class="card border-0 shadow-sm mb-4">
+
+            <div class="card-header bg-transparent py-3">
+                <h5 class="fw-bold mb-0">
+                    <i class="bi bi-heart-pulse text-success me-2"></i>
+                    Evaluación médica
+                </h5>
+            </div>
+
+            <div class="card-body p-4">
+
+                <div class="row g-3 mb-4">
+
+                    <div class="col-md-6">
+                        <div class="p-3 rounded border">
+                            <span class="text-muted small">Peso</span>
+                            <h4 class="fw-bold mb-0">
+                                @(Model.Consulta.Peso.HasValue
+                                    ? $"{Model.Consulta.Peso.Value:0.00} kg"
+                                    : "No registrado")
+                            </h4>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="p-3 rounded border">
+                            <span class="text-muted small">Temperatura</span>
+                            <h4 class="fw-bold mb-0">
+                                @(Model.Consulta.Temperatura.HasValue
+                                    ? $"{Model.Consulta.Temperatura.Value:0.0} °C"
+                                    : "No registrada")
+                            </h4>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mb-4">
+                    <h6 class="fw-bold">Síntomas</h6>
+                    <p class="text-muted mb-0" style="white-space: pre-line">
+                        @(string.IsNullOrWhiteSpace(Model.Consulta.Sintomas)
+                            ? "Sin síntomas registrados."
+                            : Model.Consulta.Sintomas)
+                    </p>
+                </div>
+
+                <div>
+                    <h6 class="fw-bold">Diagnóstico</h6>
+                    <p class="text-muted mb-0" style="white-space: pre-line">
+                        @(string.IsNullOrWhiteSpace(Model.Consulta.Diagnostico)
+                            ? "Sin diagnóstico registrado."
+                            : Model.Consulta.Diagnostico)
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TRATAMIENTO Y OBSERVACIONES -->
+        <div class="card border-0 shadow-sm mb-4">
+
+            <div class="card-header bg-transparent py-3">
+                <h5 class="fw-bold mb-0">
+                    <i class="bi bi-capsule text-success me-2"></i>
+                    Tratamiento y observaciones
+                </h5>
+            </div>
+
+            <div class="card-body p-4">
+
+                <div class="mb-4">
+                    <h6 class="fw-bold">Tratamiento indicado</h6>
+                    <p class="text-muted mb-0" style="white-space: pre-line">
+                        @(string.IsNullOrWhiteSpace(Model.Consulta.Tratamiento)
+                            ? "Sin tratamiento registrado."
+                            : Model.Consulta.Tratamiento)
+                    </p>
+                </div>
+
+                <div>
+                    <h6 class="fw-bold">Observaciones adicionales</h6>
+                    <p class="text-muted mb-0" style="white-space: pre-line">
+                        @(string.IsNullOrWhiteSpace(Model.Consulta.Observaciones)
+                            ? "Sin observaciones adicionales."
+                            : Model.Consulta.Observaciones)
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- BOTONES -->
+        <div class="d-flex justify-content-end gap-2 mb-4">
+
+            <a asp-page="./Index" class="btn btn-outline-secondary">
+                <i class="bi bi-arrow-left me-1"></i>
+                Regresar
+            </a>
+
+        </div>
+    }
+
+</div>

@@ -1,15 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>a70f1928-7802-47fe-bd09-0dd50ded7fb7</UserSecretsId>
+    <UserSecretsId>1d7d70c1-678a-4ee9-b8f7-bdf935d316f9</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Veterinaria.Entidades\Veterinaria.Entidades.csproj" />
     <ProjectReference Include="..\Veterinaria.Negocios\Veterinaria.Negocios.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\manual\" />
   </ItemGroup>
 
 </Project>

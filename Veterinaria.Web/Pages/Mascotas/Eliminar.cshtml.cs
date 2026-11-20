@@ -27,13 +27,13 @@ public class EliminarModel : PageModel
 
     public IActionResult OnPost(int id)
     {
-        IActionResult resultado = Cargar(id);
-
-        if (resultado is NotFoundResult)
-            return resultado;
-
         try
         {
+            IActionResult resultado = Cargar(id);
+
+            if (resultado is NotFoundResult)
+                return resultado;
+
             MascotaNegocio negocio = new();
             bool eliminada = negocio.Eliminar(id);
 

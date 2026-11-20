@@ -5,27 +5,81 @@
 }
 
 <div class="container py-4">
-    <h2>Eliminar Mascota</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-7 col-lg-6">
 
-    @if (!string.IsNullOrWhiteSpace(Model.Error))
-    {
-        <div class="alert alert-danger">@Model.Error</div>
-        
-        <a asp-page="./Index" class="btn btn-secondary">Regresar</a>
-    }
-    else
-    {
-        <div class="alert alert-warning">
-            ¿Desea eliminar a <strong>@Model.Mascota.Nombre</strong>?
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+
+                    <h2 class="mb-3 text-danger">
+                        <i class="bi bi-exclamation-triangle"></i>
+                        Eliminar mascota
+                    </h2>
+
+                    @if (!string.IsNullOrWhiteSpace(Model.Error))
+                    {
+                        <div class="alert alert-danger">
+                            @Model.Error
+                        </div>
+
+                        <a asp-page="./Index" class="btn btn-secondary">
+                            Regresar
+                        </a>
+                    }
+                    else
+                    {
+                        <div class="alert alert-warning">
+                            ¿Estás seguro de que deseas eliminar esta mascota?
+                            Esta acción no se puede deshacer.
+                        </div>
+
+                        <div class="mb-4">
+                            <p class="mb-1">
+                                <strong>Nombre:</strong>
+                                @Model.Mascota.Nombre
+                            </p>
+
+                            <p class="mb-1">
+                                <strong>Especie:</strong>
+                                @Model.Mascota.Especie
+                            </p>
+
+                            <p class="mb-1">
+                                <strong>Raza:</strong>
+                                @(Model.Mascota.Raza ?? "No registrada")
+                            </p>
+
+                            <p class="mb-1">
+                                <strong>Sexo:</strong>
+                                @(Model.Mascota.Sexo ?? "No registrado")
+                            </p>
+
+                            <p class="mb-0">
+                                <strong>Propietario:</strong>
+                                @Model.Propietario.Nombre
+                                @Model.Propietario.ApellidoPaterno
+                                @Model.Propietario.ApellidoMaterno
+                            </p>
+                        </div>
+
+                        <form method="post">
+                            <input type="hidden" name="id"
+                                   value="@Model.Mascota.IdMascota" />
+
+                            <button type="submit" class="btn btn-danger">
+                                <i class="bi bi-trash"></i>
+                                Eliminar
+                            </button>
+
+                            <a asp-page="./Index" class="btn btn-secondary">
+                                Cancelar
+                            </a>
+                        </form>
+                    }
+
+                </div>
+            </div>
+
         </div>
-
-        <p>
-            Propietario: <strong>@Model.Propietario.Nombre @Model.Propietario.ApellidoPaterno</strong>
-        </p>
-
-        <form method="post">
-            <button type="submit" class="btn btn-danger">Eliminar</button>
-            <a asp-page="./Index" class="btn btn-secondary">Cancelar</a>
-        </form>
-    }
+    </div>
 </div>

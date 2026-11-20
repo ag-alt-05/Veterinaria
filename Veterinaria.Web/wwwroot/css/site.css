@@ -1,31 +1,670 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+:root {
+    --color-primary: #176B5B;
+    --color-primary-dark: #105346;
+    --color-secondary: #38BFA0;
+    --color-light: #E5F4EF;
+    --color-background: #F5F8F7;
+    --color-text: #263A35;
+    --color-muted: #71817B;
+    --color-white: #FFFFFF;
+    --color-border: #E4EBE8;
+}
+
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+    height: 100;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
+    html {
+        font-size: 16px;
+    }
 }
 
 body {
-  margin-bottom: 60px;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+/* =========================================
+   ESTRUCTURA PRINCIPAL
+========================================= */
+
+main {
+    flex: 1;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+/* =========================================
+   MENÚ DE NAVEGACIÓN
+========================================= */
+
+.navbar-veterinaria {
+    background-color: var(--color-white);
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: 0 2px 12px rgba(20, 70, 55, 0.05);
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+    .navbar-veterinaria .navbar-brand {
+        text-decoration: none;
+    }
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    border-radius: 12px;
+    font-size: 22px;
 }
+
+.brand-name {
+    color: var(--color-primary-dark);
+    font-size: 22px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+}
+
+.navbar-veterinaria .nav-link {
+    color: var(--color-text);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 12px !important;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+    .navbar-veterinaria .nav-link:hover {
+        background-color: var(--color-light);
+        color: var(--color-primary);
+    }
+
+.navbar-veterinaria .navbar-toggler {
+    border-color: var(--color-border);
+    padding: 7px 10px;
+}
+
+    .navbar-veterinaria .navbar-toggler:focus {
+        box-shadow: 0 0 0 3px rgba(56, 191, 160, 0.2);
+    }
+
+/* =========================================
+   BOTONES GENERALES
+========================================= */
+
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+    .btn-primary:hover {
+        background-color: var(--color-primary-dark);
+        border-color: var(--color-primary-dark);
+    }
+
+.btn-success {
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+}
+
+/* =========================================
+   CAMPOS Y ELEMENTOS DE FORMULARIO
+========================================= */
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 0 0.2rem rgba(56, 191, 160, 0.18);
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus {
+    box-shadow: 0 0 0 0.2rem rgba(56, 191, 160, 0.25);
+}
+
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
+
+.footer-veterinaria {
+    margin-top: 0px;
+    padding: 28px 0;
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-border);
+    color: var(--color-muted);
+}
+
+    .footer-veterinaria p {
+        color: var(--color-primary-dark);
+        font-size: 16px;
+    }
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 991px) {
+    .navbar-veterinaria .navbar-nav {
+        padding-top: 15px;
+    }
+
+    .navbar-veterinaria .nav-link {
+        padding: 12px !important;
+    }
+}
+
+
+/* =========================================
+   PÁGINA PRINCIPAL - HERO
+========================================= */
+
+.inicio-hero {
+    background: linear-gradient(120deg, #F5F8F7 0%, #EAF6F1 100%);
+    padding: 85px 0 100px;
+    overflow: hidden;
+}
+
+.inicio-contenido {
+    position: relative;
+    z-index: 2;
+}
+
+.inicio-etiqueta {
+    display: inline-block;
+    background-color: #DFF3EC;
+    color: #176B5B;
+    padding: 9px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 22px;
+}
+
+.inicio-contenido h1 {
+    color: #263A35;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -1.5px;
+    margin-bottom: 24px;
+}
+
+    .inicio-contenido h1 span {
+        color: #176B5B;
+    }
+
+.inicio-descripcion {
+    color: #71817B;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 30px;
+}
+
+.inicio-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn-inicio-principal {
+    background-color: #176B5B;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 9px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+    .btn-inicio-principal:hover {
+        background-color: #105346;
+        color: white;
+        transform: translateY(-2px);
+    }
+
+.btn-inicio-secundario {
+    border: 1px solid #176B5B;
+    color: #176B5B;
+    padding: 14px 22px;
+    border-radius: 9px;
+    font-weight: 600;
+}
+
+    .btn-inicio-secundario:hover {
+        background-color: #DFF3EC;
+        color: #105346;
+    }
+
+.inicio-confianza {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 35px;
+    color: #71817B;
+    font-size: 14px;
+}
+
+    .inicio-confianza i {
+        color: #38BFA0;
+        font-size: 17px;
+    }
+
+/* =========================================
+   IMAGEN PRINCIPAL
+========================================= */
+
+.inicio-imagen-contenedor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.inicio-imagen-fondo {
+    position: absolute;
+    width: 85%;
+    height: 85%;
+    background-color: #CDEADF;
+    border-radius: 48% 52% 42% 58%;
+    transform: rotate(-8deg);
+}
+
+.inicio-imagen {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 490px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 20px 45px rgba(23, 107, 91, 0.16);
+}
+
+.inicio-imagen-etiqueta {
+    position: absolute;
+    z-index: 2;
+    bottom: 45px;
+    left: 0;
+    background-color: white;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #176B5B;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* =========================================
+   SERVICIOS
+========================================= */
+
+.inicio-servicios {
+    padding: 85px 0;
+    background-color: white;
+}
+
+.servicios-encabezado {
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.servicios-etiqueta {
+    color: #38A98C;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.servicios-encabezado h2 {
+    color: #263A35;
+    font-size: 36px;
+    font-weight: 800;
+    margin-top: 12px;
+    margin-bottom: 15px;
+}
+
+.servicios-encabezado p {
+    color: #71817B;
+    line-height: 1.7;
+}
+
+.servicio-card {
+    height: 100%;
+    background-color: #F8FBF9;
+    border: 1px solid #E4EBE8;
+    border-radius: 15px;
+    padding: 32px 25px;
+    transition: all 0.25s ease;
+}
+
+    .servicio-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(23, 107, 91, 0.09);
+        border-color: #B9E4D5;
+    }
+
+.servicio-icono {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DFF3EC;
+    color: #176B5B;
+    font-size: 25px;
+    border-radius: 13px;
+    margin-bottom: 22px;
+}
+
+.servicio-card h3 {
+    color: #263A35;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.servicio-card p {
+    color: #71817B;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* =========================================
+   SECCIÓN FINAL
+========================================= */
+
+.inicio-contacto {
+    background-color: #EAF6F1;
+    padding: 65px 20px;
+}
+
+.contacto-contenido {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contacto-icono {
+    color: #38BFA0;
+    font-size: 35px;
+}
+
+.contacto-contenido h2 {
+    color: #176B5B;
+    font-size: 32px;
+    font-weight: 800;
+    margin: 18px 0;
+}
+
+.contacto-contenido p {
+    color: #71817B;
+    line-height: 1.8;
+}
+
+.contacto-aviso {
+    display: inline-block;
+    margin-top: 15px;
+    color: #176B5B;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* =========================================
+   RESPONSIVE - PÁGINA PRINCIPAL
+========================================= */
+
+@media (max-width: 991px) {
+    .inicio-hero {
+        padding: 60px 0;
+    }
+
+    .inicio-imagen-contenedor {
+        margin-top: 45px;
+    }
+
+    .inicio-imagen {
+        height: 380px;
+    }
+}
+
+@media (max-width: 576px) {
+    .inicio-hero {
+        padding: 45px 0;
+    }
+
+    .inicio-contenido h1 {
+        font-size: 38px;
+    }
+
+    .inicio-descripcion {
+        font-size: 15px;
+    }
+
+    .inicio-botones {
+        flex-direction: column;
+    }
+
+        .inicio-botones .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+    .inicio-imagen {
+        height: 300px;
+    }
+
+    .inicio-imagen-etiqueta {
+        left: 5px;
+        bottom: 15px;
+        font-size: 11px;
+    }
+
+    .servicios-encabezado h2 {
+        font-size: 29px;
+    }
+
+    .contacto-contenido h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* =========================================
+   BOTÓN DE CAMBIO DE TEMA
+========================================= */
+
+.boton-tema {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    color: var(--color-primary);
+    background-color: var(--color-light);
+    font-size: 18px;
+    transition: all 0.2s ease;
+}
+
+    .boton-tema:hover {
+        background-color: var(--color-primary);
+        color: white;
+    }
+/* =========================================
+   MODO OSCURO
+========================================= */
+
+html[data-tema="oscuro"] {
+    --color-primary: #50C5A4;
+    --color-primary-dark: #A1E3D0;
+    --color-secondary: #38BFA0;
+    --color-light: #263D35;
+    --color-background: #101A18;
+    --color-text: #E6F0EC;
+    --color-muted: #A4B6AE;
+    --color-white: #192723;
+    --color-border: #30443D;
+}
+
+    /* Fondo y texto general */
+    html[data-tema="oscuro"] body {
+        background-color: var(--color-background);
+        color: var(--color-text);
+    }
+
+    /* Navegación */
+    html[data-tema="oscuro"] .navbar-veterinaria {
+        background-color: var(--color-white);
+        border-bottom-color: var(--color-border);
+    }
+
+        html[data-tema="oscuro"] .brand-name,
+        html[data-tema="oscuro"] .navbar-veterinaria .nav-link {
+            color: var(--color-text);
+        }
+
+    /* Página principal */
+    html[data-tema="oscuro"] .inicio-hero {
+        background: linear-gradient(120deg, #101A18 0%, #1B3029 100%);
+    }
+
+    html[data-tema="oscuro"] .inicio-contenido h1 {
+        color: var(--color-text);
+    }
+
+    html[data-tema="oscuro"] .inicio-descripcion {
+        color: var(--color-muted);
+    }
+
+    html[data-tema="oscuro"] .inicio-servicios {
+        background-color: #14211D;
+    }
+
+    html[data-tema="oscuro"] .servicios-encabezado h2,
+    html[data-tema="oscuro"] .servicio-card h3 {
+        color: var(--color-text);
+    }
+
+    html[data-tema="oscuro"] .servicios-encabezado p,
+    html[data-tema="oscuro"] .servicio-card p {
+        color: var(--color-muted);
+    }
+
+    html[data-tema="oscuro"] .servicio-card {
+        background-color: #1B2C26;
+        border-color: var(--color-border);
+    }
+
+    html[data-tema="oscuro"] .inicio-contacto {
+        background-color: #1B3029;
+    }
+
+    html[data-tema="oscuro"] .contacto-contenido p {
+        color: var(--color-muted);
+    }
+
+    /* Etiquetas y elementos secundarios */
+    html[data-tema="oscuro"] .inicio-etiqueta,
+    html[data-tema="oscuro"] .servicio-icono {
+        background-color: #263D35;
+        color: #7DDBBD;
+    }
+
+    html[data-tema="oscuro"] .inicio-imagen-etiqueta {
+        background-color: #192723;
+        color: #7DDBBD;
+    }
+
+    /* Pie de página */
+    html[data-tema="oscuro"] .footer-veterinaria {
+        background-color: #192723;
+        border-top-color: var(--color-border);
+        color: var(--color-muted);
+    }
+
+        html[data-tema="oscuro"] .footer-veterinaria p {
+            color: var(--color-primary-dark);
+        }
+
+    /* Botón de cambio de tema */
+    html[data-tema="oscuro"] .boton-tema {
+        background-color: #263D35;
+        border-color: var(--color-border);
+        color: #F5D76E;
+    }
+
+    /* =========================================
+   TABLAS - MODO OSCURO
+========================================= */
+
+    html[data-tema="oscuro"] .table {
+        --bs-table-bg: #192723;
+        --bs-table-color: #E6F0EC;
+        --bs-table-border-color: #30443D;
+        --bs-table-striped-bg: #20332C;
+        --bs-table-striped-color: #E6F0EC;
+        --bs-table-hover-bg: #263D35;
+        --bs-table-hover-color: #FFFFFF;
+        color: var(--bs-table-color);
+        border-color: var(--bs-table-border-color);
+    }
+
+        html[data-tema="oscuro"] .table thead th {
+            background-color: #263D35;
+            color: #A1E3D0;
+            border-color: #30443D;
+        }
+
+        html[data-tema="oscuro"] .table td {
+            background-color: #192723;
+            color: #E6F0EC;
+            border-color: #30443D;
+        }
+
+    html[data-tema="oscuro"] .table-hover tbody tr:hover td {
+        background-color: #263D35;
+        color: #FFFFFF;
+    }
+
+    /* Contenedores de tablas */
+    html[data-tema="oscuro"] .table-responsive {
+        border-color: #30443D;
+    }
+
+    /* Tarjetas */
+    html[data-tema="oscuro"] .card {
+        background-color: #192723;
+        border-color: #30443D;
+        color: #E6F0EC;
+    }
+
+    html[data-tema="oscuro"] .card-header {
+        background-color: #263D35;
+        border-color: #30443D;
+        color: #A1E3D0;
+    }
+
+    /* Texto secundario */
+    html[data-tema="oscuro"] .text-muted {
+        color: #A4B6AE !important;
+    }
